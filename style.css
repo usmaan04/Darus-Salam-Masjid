@@ -136,17 +136,24 @@ margin-right: 20px;
   font-family: sans-serif;
 }
 
-#temp .intro-left .intro-content .donate2{
-background: transparent;
-border: 3px solid;
-border-color: white;
-padding: 10px 40px 10px 40px;
-text-decoration: none;
-color: white;
-font-size:12px ;
-text-transform: uppercase;
-z-index: 1999;
-position: relative;
+.donate2 {
+  background: transparent;
+  border: 3px solid;
+  border-color: white;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  z-index: 1999;
+  position: relative;
+  cursor: pointer;
+}
+
+.donate2:hover {
+  background: white;
+  color: black;
 }
 
 #temp .intro-right{

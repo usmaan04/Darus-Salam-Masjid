@@ -1,101 +1,101 @@
-
 /* Reset default margin, padding, and box-sizing for all elements */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Set global styling for the body */
 body {
-color:deepskyblue;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: deepskyblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1{
-    font-size: 30px;
-    color: black;
+h1 {
+  font-size: 30px;
+  color: black;
 }
 
-p{
-color: black;
-padding: inherit;
-margin-bottom: 20px;
+p {
+  color: black;
+  padding: inherit;
+  margin-bottom: 20px;
 }
 
-h3{
-    color: black;
-    font-size: 17px;
+h3 {
+  color: black;
+  font-size: 17px;
 }
 
 /* Styling for the header container */
 #header {
-position: fixed;
-top: 0;
-width: 100%;
-z-index: 2000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
 }
 
 /* Styling for the main header */
 nav {
-background: white;
-padding: 20px 5%;
-display: flex;
-justify-content: center;
-align-items: center;
-position: fixed;
-width: 100%;
-height: 70px;
-z-index: 2001;
-color: gray;
+  background: white;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 2001;
+  color: gray;
 }
 
 /* Styling for the logo image in the main header */
 nav img {
-max-width: 50px;
-border-radius: 50%;
-margin-right: 20px;
+  max-width: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
 /* Styling for the name in the main header */
 .Name {
-font-size: 25px;
-color: black;
-text-decoration: none;
-font-weight: 600;
-margin-right: auto;
-cursor: pointer;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: auto;
+  cursor: pointer;
 }
 
 /* Styling for navigation bar links */
-.navbar-middle a,.navbar-right a {
-font-size: 12px;
-color: black;
-text-decoration: none;
-font-weight: 100;
-margin-left: 35px;
-position: relative;
+.navbar-middle a,
+.navbar-right a {
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  font-weight: 100;
+  margin-left: 35px;
+  position: relative;
 }
 
 .donate {
-background: deepskyblue;
-border: 5px solid;
-border-color: deepskyblue;
-padding: 10px 20px 10px 20px;
-text-decoration: none;
-color: black;
+  background: deepskyblue;
+  border: 5px solid;
+  border-color: deepskyblue;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: black;
 }
 
-.navbar-left{
-margin-right: auto;
+.navbar-left {
+  margin-right: auto;
 }
 
-.navbar-middle{
-margin-right: 150px;
+.navbar-middle {
+  margin-right: 150px;
 }
 
-.navbar-right{
-margin-right: 20px;
+.navbar-right {
+  margin-right: 20px;
 }
 
 #temp {
@@ -107,26 +107,26 @@ margin-right: 20px;
   height: 500px;
 }
 
-#temp .intro-left{
+#temp .intro-left {
   background-color: black;
   padding: 70px 0 0 25.4%;
 }
 
-.intro-content{
+.intro-content {
   width: 500px;
-  top: 75px; 
+  top: 75px;
   position: relative;
 }
 
-.intro-content h2{
+.intro-content h2 {
   color: white;
 }
 
-.intro-content span{
+.intro-content span {
   color: deepskyblue;
 }
 
-#temp .intro-left .intro-content h1{
+#temp .intro-left .intro-content h1 {
   color: white;
   font-size: 50px;
   margin-top: 20px;
@@ -156,7 +156,7 @@ margin-right: 20px;
   color: black;
 }
 
-#temp .intro-right{
+#temp .intro-right {
   background-image: url(assets/mosque2.jpg);
   height: 100%;
   width: 100%;
@@ -165,7 +165,7 @@ margin-right: 20px;
 
 .intro-right:before {
   margin-left: auto;
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   right: 0;
@@ -178,214 +178,222 @@ margin-right: 20px;
 
 /* Styles for cta section */
 #cta {
-background: white;
-width: 100%;
-font-size: 20px;
-padding: 70px 11.4% 0;
-color: #ffffff;
-font-family: Arial;
-position: relative;
-z-index: -1;
-height: 100vh;
-align-content: center;
+  background: white;
+  width: 100%;
+  font-size: 20px;
+  padding: 70px 11.4% 0;
+  color: #ffffff;
+  font-family: Arial;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  align-content: center;
 }
 
 /* Styling for the row layout */
 #cta .row {
-display: flex;
-justify-content: space-between;
-align-items: start;
-flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
 }
 
 /* Styling for the left column in the 'cta' section */
 #cta .left {
-flex-basis: 45%;
+  flex-basis: 45%;
 }
 /* Styling for the heading */
 #cta .left h3 {
-color: deepskyblue;
-padding-bottom: 10px;
-font-size: 15px;
-position: relative;
-display: inline-block; 
+  color: deepskyblue;
+  padding-bottom: 10px;
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
 }
 
 /* Styling for the heading */
 #cta .left h1 {
-color: black;
-padding-bottom: 10px;
-font-size: 30px;
-margin-bottom: 20px;
-position: relative;
+  color: black;
+  padding-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 /* Styling for the heading underline effect */
 #cta .left h1::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 4px;
-background-color: deepskyblue;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: deepskyblue;
 }
 
 /* Styling for the interests paragraph  */
 #cta .left p.interests {
-color: black;
-font-size: 17px;
-margin-top: 10px;
+  color: black;
+  font-size: 17px;
+  margin-top: 10px;
 }
 
 /* Styling for the right column */
 #cta .right {
-    flex-basis: 45%; /* Adjusted to match the left column */
-    text-align: center;
-    display: flex; /* Added */
-    justify-content: center; /* Added */
-    align-items: center; /* Added */
+  flex-basis: 45%; /* Adjusted to match the left column */
+  text-align: center;
+  display: flex; /* Added */
+  justify-content: center; /* Added */
+  align-items: center; /* Added */
 }
-  
+
 /* Styling for the image */
 #cta .right img {
-max-width: 100%; /* Changed to ensure the image doesn't overflow */
-max-height: 100%; /* Changed to ensure the image doesn't overflow */
-width: auto; /* Added */
-height: 400px; /* Added */
-border-radius: 15px;
-box-shadow: 19px 20px 20px deepskyblue;
+  max-width: 100%; /* Changed to ensure the image doesn't overflow */
+  max-height: 100%; /* Changed to ensure the image doesn't overflow */
+  width: auto; /* Added */
+  height: 400px; /* Added */
+  border-radius: 15px;
+  box-shadow: 19px 20px 20px deepskyblue;
 }
 
 #cta .right .carousel {
-position: relative;
+  position: relative;
 }
 
 .carousel img {
-display: none;
+  display: none;
 }
 
 #cta .carousel img.active {
-width: 100%;
-display: block;
-transition: 0.5s fade;
+  width: 100%;
+  display: block;
+  transition: 0.5s fade;
 }
 
 /* Styling for the indicators */
 .indicators {
-position: absolute;
-bottom: 10px;
+  position: absolute;
+  bottom: 10px;
 }
 
 .indicator {
-display: none;
-width: 10px;
-height: 10px;
-background-color: #bbb;
-border-radius: 50%;
-margin: 0 5px;
-cursor: pointer;
+  display: none;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
 .indicator.active {
-background-color: #333;
+  background-color: #333;
 }
 
-.prev{
-    left: 31%;
+.prev {
+  left: 31%;
 }
 
-.next{
-    left: 60%;
+.next {
+  left: 60%;
 }
 
-.prev,.next{
-font-size: 50px;
-position: absolute;
-top: 0;
-bottom: 0;
-z-index: 1;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 50%;
-padding: 0;
-color: black;
-text-align: center;
-background: 0 0;
-border: 0;
-opacity: .5;
-transition: opacity .15s ease;
+.prev,
+.next {
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 0;
+  color: black;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
 }
 
-.facilities{
-list-style: none;
-display: grid;
-align-items: center;
-grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
-margin-top: 30px;
-}
-
-/* Styling for the tel and mail links */
-.facilities li span{
-font-size: 30px;
-color: deepskyblue;
-text-decoration: none;
-padding-right: 10px;
-position: relative;
-top: 5px;
-}
-
-.facilities li{
-padding-bottom: 10px;
+.facilities {
+  list-style: none;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+  margin-top: 30px;
 }
 
 /* Styling for the tel and mail links */
-.facilities li a{
-color: black;
-text-decoration: none;
-font-size: initial;
+.facilities li span {
+  font-size: 30px;
+  color: deepskyblue;
+  text-decoration: none;
+  padding-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.facilities li {
+  padding-bottom: 10px;
+}
+
+/* Styling for the tel and mail links */
+.facilities li a {
+  color: black;
+  text-decoration: none;
+  font-size: initial;
 }
 
 .learn-more {
-font-size: 15px;
-background: deepskyblue;
-border: 5px solid;
-border-color: deepskyblue;
-padding: 10px 20px 10px 20px;
-text-decoration: none;
-color: black;
-position: absolute;
-margin-top: 250px;
-text-transform: uppercase;
-font-weight: bold;
+  font-size: 15px;
+  background: deepskyblue;
+  border: 5px solid;
+  border-color: deepskyblue;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  margin-top: 75px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.learn-more:hover {
+  background: rgb(1, 141, 188);
+  border: rgb(1, 141, 188);
+  color: white;
 }
 
 #prayer-times {
-padding: 70px 11.4% 70px;
-text-align: center;
-height: 100vh;
-z-index: -1;
+  padding: 70px 11.4% 70px;
+  text-align: center;
+  height: 100vh;
+  z-index: -1;
 }
 
-#prayer-times h1{
-color: black;
-padding-bottom: 10px;
-font-size: 30px;
-margin-bottom: 20px;
-position: absolute;
-z-index: -1;
+#prayer-times h1 {
+  color: black;
+  padding-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  position: absolute;
+  z-index: -1;
 }
-    
+
 /* Styling for the heading underline effect */
 #prayer-times h1::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 4px;
-background-color: deepskyblue;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: deepskyblue;
 }
 
 .prayer-container {
@@ -402,28 +410,27 @@ background-color: deepskyblue;
 }
 
 .prayer-container h2 {
-    color: black;
-    padding: 20px 0;
-    font-size: 1.5rem;
+  color: black;
+  padding: 20px 0;
+  font-size: 1.5rem;
 }
 
-.prayer-container .prayer-right{
+.prayer-container .prayer-right {
   text-align: left;
   margin-left: 50px;
-
 }
 
 .prayer-container .prayer-right p:nth-child(2),
-.prayer-container .prayer-right p:nth-child(3){
+.prayer-container .prayer-right p:nth-child(3) {
   font-size: 20px;
 }
 
-.download-row{
+.download-row {
   display: inline-flex;
   align-items: baseline;
 }
 
-.download-row p{
+.download-row p {
   font-size: 15px;
   margin-right: 10px;
 }
@@ -448,7 +455,9 @@ background-color: deepskyblue;
   text-decoration: none;
 }
 
-.button, .button__icon, .button__text {
+.button,
+.button__icon,
+.button__text {
   transition: all 0.3s;
 }
 
@@ -457,7 +466,6 @@ background-color: deepskyblue;
   color: var(--font-color);
   font-weight: 600;
   font-size: 13px;
-
 }
 
 .button .button__icon {
@@ -506,27 +514,27 @@ background-color: deepskyblue;
   top: 30px;
 }
 
-#about-us h1{
-color: black;
-padding-bottom: 10px;
-font-size: 30px;
-margin-bottom: 20px;
-position: absolute;
-z-index: -1;
-}
-      
-/* Styling for the heading underline effect */
-#about-us h1::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 4px;
-background-color: deepskyblue;
+#about-us h1 {
+  color: black;
+  padding-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  position: absolute;
+  z-index: -1;
 }
 
-#about-us .about-us-container{
+/* Styling for the heading underline effect */
+#about-us h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: deepskyblue;
+}
+
+#about-us .about-us-container {
   margin-top: 40px;
 }
 
@@ -557,7 +565,7 @@ background-color: deepskyblue;
 }
 
 .timeline ul:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   width: 100%;
@@ -567,7 +575,7 @@ background-color: deepskyblue;
 
 .timeline ul:after {
   content: "\f04b";
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -593,7 +601,7 @@ background-color: deepskyblue;
 }
 
 .timeline ul li:after {
-  content: '';
+  content: "";
   width: var(--circle-size);
   height: var(--circle-size);
   background: var(--line);
@@ -635,7 +643,7 @@ background-color: deepskyblue;
   margin-bottom: 5px;
 }
 
-.timeline ul li>* {
+.timeline ul li > * {
   padding-left: calc(var(--circle-size) * 0.4);
 }
 
@@ -647,7 +655,7 @@ background-color: deepskyblue;
   position: relative;
 }
 
-.timeline ul li h2{
+.timeline ul li h2 {
   color: var(--font-color);
   font-size: 1.4rem;
 }
@@ -721,7 +729,7 @@ background-color: deepskyblue;
 
 /* Styling for the contact-me heading underline */
 #contact-me h2.header::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -730,9 +738,9 @@ background-color: deepskyblue;
   background-color: deepskyblue;
 }
 
-#contact-container{
+#contact-container {
   display: grid;
-  grid-template-columns:  2fr 2fr;
+  grid-template-columns: 2fr 2fr;
 }
 
 /* Styling for the contact me form  */
@@ -764,7 +772,7 @@ background-color: deepskyblue;
 
 #contactForm input::placeholder,
 #contactForm textarea::placeholder,
-#contactForm select::placeholder{
+#contactForm select::placeholder {
   color: black;
 }
 
@@ -800,7 +808,7 @@ background-color: deepskyblue;
   background: deepskyblue;
 }
 
-.contact-right{
+.contact-right {
   background-color: #00bfff1a;
   padding: 20px;
   text-align: left;
@@ -809,27 +817,27 @@ background-color: deepskyblue;
   height: 100%;
 }
 
-.contact-right h2{
+.contact-right h2 {
   color: black;
   text-align: center;
   margin-bottom: 20px;
 }
 
-#footer{
-    font-size: 13px;
-    margin-top: 60px;
-    font-family: Arial;
-    z-index: -1;
-    top: 50px;
+#footer {
+  font-size: 13px;
+  margin-top: 60px;
+  font-family: Arial;
+  z-index: -1;
+  top: 50px;
 }
 
-footer{
-    width: 100%;
-    display: inline-flex;
-    align-items: baseline;
+footer {
+  width: 100%;
+  display: inline-flex;
+  align-items: baseline;
 }
 
-footer.top{
+footer.top {
   background-color: #00bfff1a;
   height: fit-content;
   width: 100%;
@@ -839,36 +847,36 @@ footer.top{
   align-items: flex-start;
 }
 
-.logo-apps{
+.logo-apps {
   margin-left: 35.4%;
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
 
-.logo{
+.logo {
   display: inline-flex;
   width: 100%;
   align-items: center;
 }
 
-.logo img{
+.logo img {
   max-width: 100px;
   border-radius: 50%;
   max-height: 100px;
 }
 
-.logo p{
+.logo p {
   font-size: 25px;
   align-self: baseline;
 }
 
-.apps{
+.apps {
   display: inline-grid;
   width: 60%;
   margin-top: 26px;
 }
 
-h3.prompt{
+h3.prompt {
   margin-bottom: 14px;
   font-size: 17px;
 }
@@ -916,12 +924,12 @@ h3.prompt{
   font-weight: 600;
 }
 
-footer.top .bank-details{
+footer.top .bank-details {
   margin-top: 45px;
 }
 
 footer.top .quick-links ul,
-footer.top .bank-details ul{
+footer.top .bank-details ul {
   list-style: none;
   color: black;
   margin-top: 10px;
@@ -929,31 +937,31 @@ footer.top .bank-details ul{
 
 footer.top .quick-links ul li,
 footer.top .bank-details ul li,
-footer.top .masjid-information ul li:nth-child(1){
+footer.top .masjid-information ul li:nth-child(1) {
   margin-top: 22px;
   display: flex;
 }
 
-footer.top .quick-links ul li a{
+footer.top .quick-links ul li a {
   text-decoration: none;
   color: black;
 }
 
 footer.top .masjid-information ul li:nth-child(2),
 footer.top .masjid-information ul li:nth-child(3),
-footer.top .masjid-information ul li:nth-child(4){
+footer.top .masjid-information ul li:nth-child(4) {
   display: flex;
   margin-top: 5px;
 }
 
-footer.top .masjid-information li i{
+footer.top .masjid-information li i {
   color: deepskyblue;
   font-size: 20px;
   margin-right: 10px;
   transform: translateY(-4px);
 }
 
-footer.top .masjid-information li a{
+footer.top .masjid-information li a {
   color: black;
   text-decoration: none;
   font-size: 13px;
@@ -961,37 +969,37 @@ footer.top .masjid-information li a{
   transform: translateY(-2px);
 }
 
-footer.bottom{
+footer.bottom {
   padding: 20px 11.4% 0px;
   background: deepskyblue;
   color: black;
 }
 
-#footer .footer-left  p,
-#footer .footer-right p{
-    color: black;
-    font-size: 17px;
-    font-weight: bold;
+#footer .footer-left p,
+#footer .footer-right p {
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
 }
 
 #footer .footer-right {
   margin-left: auto;
 }
 
-@media screen and (max-device-width:1200px){
-    /* Reset default margin, padding, and box-sizing for all elements */
-* {
+@media screen and (max-device-width: 1200px) {
+  /* Reset default margin, padding, and box-sizing for all elements */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   /* Set global styling for the body */
   body {
     color: deepskyblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  
+
   /* Styling for the header container */
   #header {
     position: fixed;
@@ -999,7 +1007,7 @@ footer.bottom{
     width: 100%;
     z-index: 2000; /* Adjusted */
   }
-  
+
   /* Styling for the main header */
   nav {
     background: white;
@@ -1013,20 +1021,20 @@ footer.bottom{
     z-index: 2001;
     color: gray;
   }
-  
+
   /* Styling for the logo image in the main header */
   nav img {
     max-width: 40px; /* Adjusted */
     border-radius: 50%;
     margin-right: 10px; /* Adjusted */
   }
-  
+
   /* Styling for the name in the main header */
   .Name {
     font-size: 20px; /* Adjusted */
     font-weight: bold;
   }
-  
+
   /* Styling for navigation bar links */
   nav a {
     font-size: 12px;
@@ -1034,7 +1042,7 @@ footer.bottom{
     text-decoration: none;
     margin: 0 5px; /* Adjusted */
   }
-  
+
   /* Styles for cta section */
   #cta {
     background: white;
@@ -1042,36 +1050,36 @@ footer.bottom{
     padding: 60px 5% 0; /* Adjusted */
     color: #000;
   }
-  
+
   /* Styling for the row layout */
   #cta .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Adjusted */
   }
-  
+
   /* Styling for the left column in the 'cta' section */
   #cta .left {
     flex-basis: 100%; /* Adjusted */
   }
-  
+
   /* Styling for the heading */
   #cta .left h1 {
     font-size: 24px; /* Adjusted */
     margin-bottom: 10px; /* Adjusted */
   }
-  
+
   /* Styling for the interests paragraph */
   #cta .left p.interests {
     font-size: 14px; /* Adjusted */
     margin-top: 5px; /* Adjusted */
   }
-  
+
   /* Styling for the right column */
   #cta .right {
     flex-basis: 100%; /* Adjusted */
   }
-  
+
   /* Styling for the image */
   #cta .right img {
     max-width: 100%;
@@ -1079,7 +1087,7 @@ footer.bottom{
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
-  
+
   /* Styling for the indicators */
   .indicators {
     position: absolute;
@@ -1087,9 +1095,10 @@ footer.bottom{
     left: 50%;
     transform: translateX(-50%); /* Adjusted */
   }
-  
+
   /* Styling for the previous and next buttons */
-  .prev, .next {
+  .prev,
+  .next {
     font-size: 24px; /* Adjusted */
     position: absolute;
     top: 50%;
@@ -1100,7 +1109,7 @@ footer.bottom{
     border-radius: 5px; /* Adjusted */
     cursor: pointer;
   }
-  
+
   /* Styling for the footer */
   #footer {
     width: 100%;
@@ -1110,129 +1119,130 @@ footer.bottom{
     color: lightgray;
     position: relative;
   }
-  
+
   /* Styling for footer content */
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   #footer .footer-left p {
     margin: 10px 0; /* Adjusted */
   }
-  
+
   #footer .footer-right ul {
     list-style: none;
     justify-content: flex-end;
   }
-  
+
   #footer .footer-right ul li {
     display: inline;
     margin-left: 15px; /* Adjusted */
   }
-  
+
   /* Media Query for Mobile Devices */
   @media only screen and (max-width: 768px) {
     /* Adjustments for smaller screens */
     nav {
       padding: 10px 3%; /* Adjusted */
     }
-  
+
     nav img {
       max-width: 30px; /* Adjusted */
     }
-  
+
     .Name {
       font-size: 18px; /* Adjusted */
     }
-  
+
     nav a {
       font-size: 10px; /* Adjusted */
     }
-  
+
     #cta .left h1 {
       font-size: 20px; /* Adjusted */
     }
-  
+
     #cta .left p.interests {
       font-size: 12px; /* Adjusted */
     }
-  
-    .prev, .next {
+
+    .prev,
+    .next {
       font-size: 20px; /* Adjusted */
     }
-  
+
     #footer {
       font-size: 12px; /* Adjusted */
       padding: 20px 3%; /* Adjusted */
     }
-  
+
     #footer .footer-left p {
       margin: 5px 0; /* Adjusted */
     }
-  }  
+  }
 }
 
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
-    /* Hide regular navigation links */
-    nav ul {
-      display: none;
-    }
-  
-    /* Show hamburger icon */
-    .hamburger-menu {
-      display: block;
-    }
-  
-    /* Adjustments when hamburger menu is clicked */
-    nav ul.active {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: white;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      z-index: 999;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-  
-    nav ul.active li {
-      margin: 10px 0;
-    }
-  
-    /* Styling for hamburger icon */
-    .hamburger-menu {
-      display: block;
-      cursor: pointer;
-      padding: 10px;
-      background: deepskyblue;
-      border-radius: 3px;
-      position: absolute;
-      top: 15px;
-      right: 15px;
-    }
-  
-    .hamburger-menu .bar {
-      width: 25px;
-      height: 3px;
-      background: white;
-      margin: 5px 0;
-      transition: 0.4s;
-    }
-  
-    .hamburger-menu.active .bar:nth-child(1) {
-      transform: translateY(6px) rotate(45deg);
-    }
-  
-    .hamburger-menu.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-  
-    .hamburger-menu.active .bar:nth-child(3) {
-      transform: translateY(-6px) rotate(-45deg);
-    }
+  /* Hide regular navigation links */
+  nav ul {
+    display: none;
   }
+
+  /* Show hamburger icon */
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Adjustments when hamburger menu is clicked */
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul.active li {
+    margin: 10px 0;
+  }
+
+  /* Styling for hamburger icon */
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background: deepskyblue;
+    border-radius: 3px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}

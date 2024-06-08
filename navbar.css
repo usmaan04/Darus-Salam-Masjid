@@ -55,7 +55,11 @@ nav {
 }
 
 .navbar-middle a:hover {
-  background: rgb(129, 224, 255);
+  background: var(--navbar-option-hover);
+}
+
+.navbar-middle a.option-selected {
+  background: var(--navbar-option-hover);
 }
 
 .donate {
@@ -68,8 +72,8 @@ nav {
 }
 
 .donate:hover {
-  background: rgb(3, 130, 172);
-  border-color: rgb(3, 130, 172);
+  background: var(--navbar-donate-hover);
+  border-color: var(--navbar-donate-hover);
   color: white;
 }
 

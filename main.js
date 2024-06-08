@@ -1,11 +1,11 @@
 // Scrolls to Home section
 document.addEventListener('DOMContentLoaded', function () {
-    var portfolioButton = document.querySelector('[href="#"]');
+    var portfolioButton = document.querySelector('[href="#header"]');
 
     portfolioButton.addEventListener('click', function (event) {
         event.preventDefault();
 
-        var portfolioSection = document.getElementById('#');
+        var portfolioSection = document.getElementById('header');
         var offset = portfolioSection.offsetTop;
         window.scrollTo({ top: offset, behavior: 'smooth' });
     });
@@ -114,4 +114,30 @@ document.addEventListener('DOMContentLoaded', function () {
         var offset = portfolioSection.offsetTop;
         window.scrollTo({ top: offset, behavior: 'smooth' });
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarLinks = document.querySelectorAll('.navbar-middle a');
+    const sections = document.querySelectorAll('section');
+    
+    function activateLink() {
+        const buffer = 40; 
+        
+        let index = sections.length;
+
+        while(--index && window.scrollY + buffer < sections[index].offsetTop) {}
+
+        navbarLinks.forEach((link) => link.classList.remove('option-selected'));
+        if (index >= 0) {
+            const currentSection = sections[index];
+            navbarLinks.forEach(link => {
+                if (link.getAttribute('href').substring(1) === currentSection.id) {
+                    link.classList.add('option-selected');
+                }
+            });
+        }
+    }
+
+    activateLink();
+    window.addEventListener('scroll', activateLink);
 });

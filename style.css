@@ -27,76 +27,13 @@ h3 {
   font-size: 17px;
 }
 
-/* Styling for the header container */
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2000;
-}
-
-/* Styling for the main header */
-nav {
-  background: white;
-  padding: 20px 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 70px;
-  z-index: 2001;
-  color: gray;
-}
-
-/* Styling for the logo image in the main header */
+/* TODO: review if needed */
+/* Styling for the logo image in the main header
 nav img {
   max-width: 50px;
   border-radius: 50%;
   margin-right: 20px;
-}
-
-/* Styling for the name in the main header */
-.Name {
-  font-size: 25px;
-  color: black;
-  text-decoration: none;
-  font-weight: 600;
-  margin-right: auto;
-  cursor: pointer;
-}
-
-/* Styling for navigation bar links */
-.navbar-middle a,
-.navbar-right a {
-  font-size: 12px;
-  color: black;
-  text-decoration: none;
-  font-weight: 100;
-  margin-left: 35px;
-  position: relative;
-}
-
-.donate {
-  background: deepskyblue;
-  border: 5px solid;
-  border-color: deepskyblue;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  color: black;
-}
-
-.navbar-left {
-  margin-right: auto;
-}
-
-.navbar-middle {
-  margin-right: 150px;
-}
-
-.navbar-right {
-  margin-right: 20px;
-}
+} */
 
 #temp {
   position: relative;
@@ -1000,14 +937,6 @@ footer.bottom {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
-  /* Styling for the header container */
-  #header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2000; /* Adjusted */
-  }
-
   /* Styling for the main header */
   nav {
     background: white;
@@ -1027,12 +956,6 @@ footer.bottom {
     max-width: 40px; /* Adjusted */
     border-radius: 50%;
     margin-right: 10px; /* Adjusted */
-  }
-
-  /* Styling for the name in the main header */
-  .Name {
-    font-size: 20px; /* Adjusted */
-    font-weight: bold;
   }
 
   /* Styling for navigation bar links */
@@ -1152,10 +1075,6 @@ footer.bottom {
       max-width: 30px; /* Adjusted */
     }
 
-    .Name {
-      font-size: 18px; /* Adjusted */
-    }
-
     nav a {
       font-size: 10px; /* Adjusted */
     }
@@ -1181,68 +1100,5 @@ footer.bottom {
     #footer .footer-left p {
       margin: 5px 0; /* Adjusted */
     }
-  }
-}
-
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 768px) {
-  /* Hide regular navigation links */
-  nav ul {
-    display: none;
-  }
-
-  /* Show hamburger icon */
-  .hamburger-menu {
-    display: block;
-  }
-
-  /* Adjustments when hamburger menu is clicked */
-  nav ul.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  nav ul.active li {
-    margin: 10px 0;
-  }
-
-  /* Styling for hamburger icon */
-  .hamburger-menu {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    background: deepskyblue;
-    border-radius: 3px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-
-  .hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-
-  .hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-
-  .hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
   }
 }

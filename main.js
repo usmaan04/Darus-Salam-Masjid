@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//Check if section is in viewpoint
 document.addEventListener('DOMContentLoaded', function() {
     const navbarLinks = document.querySelectorAll('.navbar-middle a');
     const sections = document.querySelectorAll('section');

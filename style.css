@@ -207,7 +207,7 @@ nav {
   }
 }
 
-#temp {
+#cta {
   position: relative;
   top: 100px;
   display: grid;
@@ -216,26 +216,26 @@ nav {
   height: 500px;
 }
 
-#temp .intro-left {
+#cta .cta-left {
   background-color: black;
   padding: 70px 0 0 25.4%;
 }
 
-.intro-content {
+.cta-content {
   width: 500px;
   top: 75px;
   position: relative;
 }
 
-.intro-content h2 {
+.cta-content h2 {
   color: white;
 }
 
-.intro-content span {
+.cta-content span {
   color: deepskyblue;
 }
 
-#temp .intro-left .intro-content h1 {
+#cta .cta-left .cta-content h1 {
   color: white;
   font-size: 50px;
   margin-top: 20px;
@@ -265,14 +265,14 @@ a.donate2:hover {
   color: black;
 }
 
-#temp .intro-right {
+#cta .cta-right {
   background-image: url(assets/mosque2.jpg);
   height: 100%;
   width: 100%;
   background-size: cover;
 }
 
-.intro-right:before {
+.cta-right:before {
   margin-left: auto;
   content: "";
   position: absolute;
@@ -286,7 +286,7 @@ a.donate2:hover {
 }
 
 /* Styles for cta section */
-#cta {
+#intro {
   background: white;
   width: 100%;
   font-size: 20px;
@@ -299,7 +299,7 @@ a.donate2:hover {
 }
 
 /* Styling for the row layout */
-#cta .row {
+#intro .row {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -307,11 +307,11 @@ a.donate2:hover {
 }
 
 /* Styling for the left column in the 'cta' section */
-#cta .left {
+#intro .intro-left {
   flex-basis: 45%;
 }
 /* Styling for the heading */
-#cta .left h3 {
+#intro .intro-left h3 {
   color: deepskyblue;
   padding-bottom: 10px;
   font-size: 15px;
@@ -320,7 +320,7 @@ a.donate2:hover {
 }
 
 /* Styling for the heading */
-#cta .left h1 {
+#intro .intro-left h1 {
   color: black;
   padding-bottom: 10px;
   font-size: 30px;
@@ -329,7 +329,7 @@ a.donate2:hover {
 }
 
 /* Styling for the heading underline effect */
-#cta .left h1::after {
+#intro .intro-left h1::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -340,14 +340,14 @@ a.donate2:hover {
 }
 
 /* Styling for the interests paragraph  */
-#cta .left p.interests {
+#intro .intro-left p.interests {
   color: black;
   font-size: 17px;
   margin-top: 10px;
 }
 
 /* Styling for the right column */
-#cta .right {
+#intro .intro-right {
   flex-basis: 45%; /* Adjusted to match the left column */
   text-align: center;
   display: flex; /* Added */
@@ -356,7 +356,7 @@ a.donate2:hover {
 }
 
 /* Styling for the image */
-#cta .right img {
+#intro .intro-right img {
   max-width: 100%; /* Changed to ensure the image doesn't overflow */
   max-height: 100%; /* Changed to ensure the image doesn't overflow */
   width: auto; /* Added */
@@ -365,7 +365,7 @@ a.donate2:hover {
   box-shadow: 19px 20px 20px deepskyblue;
 }
 
-#cta .right .carousel {
+#intro .intro-right .carousel {
   position: relative;
 }
 
@@ -373,7 +373,7 @@ a.donate2:hover {
   display: none;
 }
 
-#cta .carousel img.active {
+#intro .carousel img.active {
   width: 100%;
   display: block;
   transition: 0.5s fade;

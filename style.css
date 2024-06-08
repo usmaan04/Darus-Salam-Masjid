@@ -245,7 +245,7 @@ nav {
   font-family: sans-serif;
 }
 
-.donate2 {
+a.donate2  {
   background: transparent;
   border: 3px solid;
   border-color: white;
@@ -253,14 +253,14 @@ nav {
   text-decoration: none;
   font-weight: bold;
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   z-index: 1999;
   position: relative;
   cursor: pointer;
 }
 
-.donate2:hover {
+a.donate2:hover {
   background: white;
   color: black;
 }

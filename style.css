@@ -1,3 +1,9 @@
+/* CSS Colour Variables */
+:root {
+  --navbar-option-hover: rgb(129, 224, 255);
+  --navbar-donate-hover: rgb(3, 130, 172);
+}
+
 /* Reset default margin, padding, and box-sizing for all elements */
 * {
   margin: 0;

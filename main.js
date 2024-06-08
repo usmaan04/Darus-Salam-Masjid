@@ -33,7 +33,7 @@ function setupNavbarLinkActivation() {
     if (index >= 0) {
       const currentSection = sections[index];
       navbarLinks.forEach((link) => {
-        if (currentSection.id === "cta" || currentSection.id === "temp") {
+        if (currentSection.id === "cta" || currentSection.id === "intro") {
           navbarLinks[0].classList.add("option-selected");
         }
         if (link.getAttribute("href").substring(1) === currentSection.id) {

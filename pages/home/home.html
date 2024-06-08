@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="style.css" >
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../style.css" >
+    <link rel="stylesheet" type="text/css" href="../../navbar.css" >
+    <script src="home.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -13,20 +14,20 @@
     <main>
         <!-- Header Section -->
         <section id="header">
-            <header class="main-header">
+            <header>
                 <nav>
                     <div class="navbar-left">
                         <a href="#" class="Name">Darus Salam Masjid</a>
                     </div>
                     <div class="navbar-middle">
                         <a href="#">Home</a>
-                        <a href="#portfolio">Prayer Times</a>
-                        <a href="about-us.html">About Us</a>
-                        <a href="#portfolio">Donate</a>
-                        <a href="#contact-us">Contact Us</a>
+                        <a href="../prayer/prayer.html">Prayer Times</a>
+                        <a href="../about/about.html">About Us</a>
+                        <a href="../donate/donate.html">Donate</a>
+                        <a href="../contact/contact.html">Contact Us</a>
                     </div>
                     <div class="navbar-right">
-                        <a class="donate" href="#donate">Donate Now</a>
+                        <a class="donate" href="../donate/donate.html">Donate Now</a>
                     </div>
                 </nav>
                 <!-- HTML for the hamburger menu icon -->
@@ -37,14 +38,14 @@
                 </div>
             </header>
         </section>
-        
+
         <!-- CTA Section -->
         <section id="temp">
             <div class="intro-left">
                 <div class="intro-content">
                 <h2>Build <span>your</span> house in Jannah</h2>
                 <h1>Donate <span>now</span> for the <span>sake</span> of Allah</h1>
-                <button class="donate2" href="#portfolio">Donate</button>
+                <button id="donate-btn" class="donate2" type="button">Donate</button>
                 </div>
             </div>
             <div class="intro-right">
@@ -63,15 +64,15 @@
                         <li><span><i class='bx bxs-school'></i></i></span><a>Madrasah Classes</a></li>
                         <li><span><i class='bx bxs-parking'></i></i></span><a>Car Park</a></li>
                         <li><span><i class='bx bx-plus-medical'></i></span><a>Funeral Arrangements</a></li>
-                        <button class="learn-more" href="#">Learn More</button>
                     </ul>
+                    <button id="learn-more-btn" type="button" class="learn-more">Learn More</button>
                 </div>
                 
                 <div class="right">
                     <div class="carousel">
-                        <img src="assets/mosque2.jpg" alt="Mosque 1" class="active">
-                        <img src="assets/down1.jpg" alt="Mosque 2">
-                        <img src="assets/2.jpg" alt="Mosque 3">
+                        <img src="../../assets/mosque2.jpg" alt="Mosque 1" class="active">
+                        <img src="../../assets/down1.jpg" alt="Mosque 2">
+                        <img src="../../assets/2.jpg" alt="Mosque 3">
                     </div>
                     <div class="indicators"></div>
                 </div>
@@ -177,7 +178,7 @@
             <footer class="top">
                 <div class="logo-apps">
                     <div class="logo">
-                        <img src="assets/general.jpg" alt="">
+                        <img src="../../assets/general.jpg" alt="">
                     </div>
                     <div class="apps">
                         <h3 class="prompt">Download our App</h3>

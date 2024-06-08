@@ -21,10 +21,10 @@
                     </div>
                     <div class="navbar-middle">
                         <a class="option-selected" href="#">Home</a>
-                        <a href="pages/prayer/prayer.html">Prayer Times</a>
-                        <a href="pages/about/about.html">About Us</a>
-                        <a href="pages/donate/donate.html">Donate</a>
-                        <a href="pages/contact/contact.html">Contact Us</a>
+                        <a href="#prayer-times">Prayer Times</a>
+                        <a href="#about-us">About Us</a>
+                        <a href="#donate">Donate</a>
+                        <a href="#contact-us">Contact Us</a>
                     </div>
                     <div class="navbar-right">
                         <a class="donate" href="pages/donate/donate.html">Donate Now</a>
@@ -43,7 +43,7 @@
         <section id="temp">
             <div class="intro-left">
                 <div class="intro-content">
-                <h2>Build <span>your</span> house in Jannah</h2>
+                <h2>Build <span>your</span> house in <span>Jannah</span></h2>
                 <h1>Donate <span>now</span> for the <span>sake</span> of Allah</h1>
                 <button id="donate-btn" class="donate2" type="button">Donate</button>
                 </div>
@@ -129,11 +129,14 @@
         </section>  
         
         <!-- Contact Me Section -->
-        <section id="contact-me">
+        <section id="contact-us">
             <h2 class="header">Contact Us</h2>
             <div id="contact-container">
-                <form id="contactForm">          
-                    <input type="text" id="firstName" name="firstName" placeholder="Full Name" required>
+                <form id="contactForm"> 
+                    <div class="form-row"> 
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                        <input type="text" id="lastName" name="lastName" placeholder="Lat Name" required>
+                      </div>         
                     <div class="form-row"> 
                       <input type="email" id="email" name="email" placeholder="Email" required>
                       <input type="email" id="confirmEmail" name="confirmEmail"  placeholder="Confirm Email" required>
@@ -222,10 +225,10 @@
                 <div class="quick-links">
                     <h3>Quick Links</h3>
                     <ul class="links">
-                        <li><a href="#">Prayer Times</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Donate</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#prayer-times">Prayer Times</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
                     </ul>
 
                     <div class="bank-details">

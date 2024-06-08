@@ -647,8 +647,8 @@ nav img {
   }
 }
 
-/* Styling for the contact-me section */
-#contact-me {
+/* Styling for the contact-us section */
+#contact-us {
   font-family: Tahoma;
   width: 100%;
   flex-direction: column;
@@ -657,8 +657,8 @@ nav img {
   margin-top: 20px;
 }
 
-/* Styling for contact-me heading */
-#contact-me h2.header {
+/* Styling for contact-us heading */
+#contact-us h2.header {
   position: relative;
   color: black;
   margin-top: 10px;
@@ -670,8 +670,8 @@ nav img {
   text-align: center;
 }
 
-/* Styling for the contact-me heading underline */
-#contact-me h2.header::after {
+/* Styling for the contact-us heading underline */
+#contact-us h2.header::after {
   content: "";
   position: absolute;
   bottom: 0;

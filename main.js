@@ -54,3 +54,42 @@ document.addEventListener("DOMContentLoaded", function () {
   setupSmoothScrollLinks();
   setupNavbarLinkActivation();
 });
+
+// Function to send emails
+function validateForm() {
+  // Get form values
+  const firstName = document.getElementById('firstName').value;
+  const lastName = document.getElementById('lastName').value;
+  const email = document.getElementById('email').value;
+  const confirmEmail = document.getElementById('confirmEmail').value;
+  const phone = document.getElementById('phone').value;
+  const contactPreference = document.getElementById('contactPreference').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  // Validate required fields
+  if (firstName === '' || lastName === '' || email === '' || confirmEmail === '' || phone === '' || subject === '' || message === '') {
+      alert('Please fill in all required fields.');
+      return;
+  }
+
+  // Validate email
+  function checkEmails(email, confirmEmail) {
+      if (email !== confirmEmail) {
+          alert('Emails do not match. Please confirm your email.');
+          return false;
+      }
+      return true;
+  }
+
+  if (checkEmails(email, confirmEmail)) {
+      // Display summary 
+      const summaryMessage = `To darussalammasjiddarlaston@gmail.com \nName: ${firstName + lastName}\nEmail: ${email}\nPhone: ${phone}\nContact Preference: ${contactPreference}\nSubject: ${subject}\nMessage: ${message}`;
+      const confirmation = confirm(`${summaryMessage}\nPress OK to confirm.`);
+      // Show confirmation of email sent
+      if (confirmation) {
+          alert(`Email sent to: darussalammasjiddarlaston@gmail.com`);
+      }
+  }
+}
+

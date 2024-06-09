@@ -73,8 +73,28 @@ function validateForm() {
       return;
   }
 
+  // Regular expression to check if the email is anything@anything.anything
+  function validateEmail(){
+    var re = /\S+@\S+\.\S+/;
+    if ( re.test(email) == false){
+      alert('Please enter a valid email address');
+      return false;
+    }
+    return true;
+  }
+  
+  // Regular expression to check if the phone number starts with 0 and is 11 digits long
+  function validatePhoneNumber(phone) {
+    const phoneRegex = /^0\d{10}$/;
+    if ( phoneRegex.test(phone) == false){
+      alert('Please enter a valid phone number');
+      return false;
+    }
+    return true;
+}
+
   // Validate email
-  function checkEmails(email, confirmEmail) {
+  function checkMatchingEmails(email, confirmEmail) {
       if (email !== confirmEmail) {
           alert('Emails do not match. Please confirm your email.');
           return false;
@@ -82,13 +102,19 @@ function validateForm() {
       return true;
   }
 
-  if (checkEmails(email, confirmEmail)) {
+
+  if (validateEmail(email) && validatePhoneNumber(phone) && checkMatchingEmails(email, confirmEmail)) {
       // Display summary 
-      const summaryMessage = `To darussalammasjiddarlaston@gmail.com \nName: ${firstName + lastName}\nEmail: ${email}\nPhone: ${phone}\nContact Preference: ${contactPreference}\nSubject: ${subject}\nMessage: ${message}`;
+      const fullName = firstName + " " + lastName;
+      const summaryMessage = `To darussalammasjiddarlaston@gmail.com \nName: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nContact Preference: ${contactPreference}\nSubject: ${subject}\nMessage: ${message}`;
       const confirmation = confirm(`${summaryMessage}\nPress OK to confirm.`);
       // Show confirmation of email sent
       if (confirmation) {
-          alert(`Email sent to: darussalammasjiddarlaston@gmail.com`);
+        // Construct the mailto link
+        const mailtoLink = `mailto:darussalammasjiddarlaston@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + "\nFrom " + fullName )}`;
+        
+        // Open the mail client with prefilled details
+        window.location.href = mailtoLink;
       }
   }
 }

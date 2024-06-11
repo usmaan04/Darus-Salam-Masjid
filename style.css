@@ -977,6 +977,7 @@ border-radius: 20%;
   border-radius: 5px;
   background-color: #00bfff1a;
   color: black;
+  font-family: Arial;
 }
 
 /* Styling for the submit button */
@@ -1037,7 +1038,7 @@ footer.top {
 }
 
 .logo-apps {
-  margin-left: 35.4%;
+  margin-left: 27.4%;
   display: grid;
   grid-template-rows: 1fr 1fr;
 }

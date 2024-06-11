@@ -865,8 +865,14 @@ align-content: center;
 
 .price{
 padding: 15px;
-background-color: white;
+background-color: deepskyblue;
 border-radius: 20%;
+}
+
+.donate-row{
+  display: inline-flex;
+  margin-top: 20px;
+  gap: 20px;
 }
 
 .donate-right{

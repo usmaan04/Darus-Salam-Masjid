@@ -1032,7 +1032,7 @@ footer.top {
   width: 100%;
   padding: 60px 0% 60px;
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 1.5fr;
   align-items: flex-start;
 }
 

@@ -82,7 +82,8 @@ nav {
 }
 
 .navbar-middle {
-  margin-right: 150px;
+  text-align: center;
+  margin-right: 100px;
 }
 
 .navbar-right {
@@ -517,32 +518,57 @@ a.donate2:hover {
   margin-top: 80px;
 }
 
-.prayer-container h2 {
-  color: black;
-  padding: 20px 0;
-  font-size: 1.5rem;
-}
-
 .prayer-container .prayer-right {
   text-align: left;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin-left: 50px;
 }
 
-.prayer-container .prayer-right p:nth-child(2),
-.prayer-container .prayer-right p:nth-child(3) {
+.prayer-container .prayer-right h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid deepskyblue;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.prayer-container .prayer-right .jumuah-times h4 {
   font-size: 20px;
+  color: #555;
+  margin: 0;
 }
 
-.download-row {
-  display: inline-flex;
-  align-items: baseline;
+.prayer-container .prayer-right .jumuah-times .prayer-time-item {
+  margin-bottom: 20px;
 }
 
-.download-row p {
-  font-size: 15px;
-  margin-right: 10px;
+.prayer-container .prayer-right .jumuah-times p.times {
+  font-size: 22px;
+  color: deepskyblue;
+  margin-top: 12px;
 }
 
+.download-container{
+  display: flex;
+    position: relative;
+}
+
+.download-section {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.download-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
 .button {
   --main-focus: #2d8cf0;
   --font-color: black;
@@ -570,44 +596,93 @@ a.donate2:hover {
 }
 
 .button .button__text {
-  transform: translateX(21px);
   color: var(--font-color);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 10px;
 }
 
-.button .button__icon {
-  position: absolute;
-  transform: translateX(109px);
-  height: 100%;
-  width: 39px;
-  background-color: var(--bg-color-sub);
-  display: flex;
+.button .button__text.two {
+  transform: translateX(-10px);
+}
+
+.download-section .button {
+  display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: deepskyblue;
+  color: #fff;
+  padding: 10px 20px;
+  align-items: center;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  height: 60px;
+  width: 60px;
 }
 
-.button .svg {
+.download-section .button:hover {
+  transform: scale(1.05);
+}
+
+.download-section .button__text {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.download-section .button__icon {
   width: 20px;
-  fill: var(--main-color);
+  height: 20px;
 }
 
-.button:hover {
-  background: var(--bg-color);
+.download-section .button__icon svg {
+  fill: #fff;
+  
 }
 
-.button:hover .button__text {
-  color: transparent;
+i{
+font-size: 30px;
+transition: 1s;
 }
 
-.button:hover .button__icon {
-  width: 148px;
-  transform: translateX(0);
+.button:hover i {
+  transform: rotate(45deg);
 }
 
-.button:active {
-  transform: translate(3px, 3px);
-  box-shadow: 0px 0px var(--main-color);
+.svgIcon {
+  fill: white;
+  transform: translateY(-5px);
+}
+
+.icon2 {
+  width: 18px;
+  height: 5px;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.button:hover .icon2 {
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.button:hover .svgIcon {
+  fill: rgb(255, 255, 255);
+  animation: slide-in-top 1s linear infinite;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 #about-us {
@@ -849,7 +924,7 @@ a.donate2:hover {
   height: fit-content;
   grid-template-columns: 3fr 2fr;
   border-radius: 30px;
-  padding: 60px;
+  padding: 40px;
 }
 
 .donate-left{
@@ -876,8 +951,11 @@ border-radius: 20%;
 }
 
 .donate-right{
+  background-color: white;
+  padding: 10px;
   text-align: center;
-  height: 40vh;
+  border-radius: 25px;
+  height: fit-content;
   align-content: center;
 }
 

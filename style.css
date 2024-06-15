@@ -120,9 +120,9 @@ nav {
 }
 
 .donate:hover {
-  background: var(--navbar-donate-hover);
-  border-color: var(--navbar-donate-hover);
-  color: white;
+  background: var(--navbar-option-hover);
+  border-color: var(--navbar-option-hover);
+  color: black;
 }
 
 @media screen and (max-device-width: 1200px) {
@@ -473,9 +473,13 @@ a.donate2:hover {
 }
 
 .learn-more:hover {
-  background: rgb(1, 141, 188);
-  border: rgb(1, 141, 188);
-  color: white;
+  background: var(--navbar-option-hover);
+  border-color: var(--navbar-option-hover);
+  color: black;
+}
+
+.mobile{
+  height: 100%;
 }
 
 #prayer-times {
@@ -957,6 +961,7 @@ border-radius: 20%;
   border-radius: 25px;
   height: fit-content;
   align-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .donate-right p:nth-child(1){

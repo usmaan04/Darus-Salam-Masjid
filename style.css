@@ -1133,9 +1133,9 @@ footer.top {
 }
 
 .logo img {
-  max-width: 100px;
+  max-width: 125px;
   border-radius: 50%;
-  max-height: 100px;
+  max-height: 200px;
 }
 
 .logo p {

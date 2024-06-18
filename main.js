@@ -49,10 +49,114 @@ function setupNavbarLinkActivation() {
   });
 }
 
-// Single DOMContentLoaded event listener to initialize both functions
+// Setup Currency field in Donate Section
+function setupCurrencyInputField() {
+  const currencyInput = document.querySelector("input[data-type='currency']");
+  if (!currencyInput) {
+    console.error("Not found");
+    return;
+  }
+
+  currencyInput.addEventListener("keyup", () => formatCurrency(currencyInput));
+  currencyInput.addEventListener("blur", () =>
+    formatCurrency(currencyInput, "blur")
+  );
+}
+
+// setupCurrencyInputField helper methods
+const formatNumber = (number) =>
+  number.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+function formatCurrency(input, blur) {
+  let inputValue = input.value;
+
+  if (inputValue === "") return;
+
+  const originalLength = inputValue.length;
+  let caretPosition = input.selectionStart;
+
+  if (inputValue.indexOf(".") >= 0) {
+    const decimalPosition = inputValue.indexOf(".");
+    let leftSide = inputValue.substring(0, decimalPosition);
+    let rightSide = inputValue.substring(decimalPosition);
+
+    leftSide = formatNumber(leftSide);
+    rightSide = formatNumber(rightSide);
+
+    if (blur === "blur") {
+      rightSide += "00";
+    }
+
+    rightSide = rightSide.substring(0, 2);
+    inputValue = `£${leftSide}.${rightSide}`;
+  } else {
+    inputValue = `£${formatNumber(inputValue)}`;
+
+    if (blur === "blur") {
+      inputValue += ".00";
+    }
+  }
+
+  input.value = inputValue;
+
+  const updatedLength = inputValue.length;
+  caretPosition = updatedLength - originalLength + caretPosition;
+  input.setSelectionRange(caretPosition, caretPosition);
+}
+
+// setup donation form
+function setupDonationForm() {
+  const donateButtons = document.querySelectorAll(".donate-button");
+  const customAmountButton = document.querySelector(".custom-amount");
+  const customAmountInput = document.getElementById("donate-input");
+  const checkoutButton = document.getElementById("checkout");
+  const activeClass = "donate-button--active";
+
+  if (
+    donateButtons.length === 0 ||
+    customAmountButton === null ||
+    customAmountInput === null ||
+    checkoutButton === null
+  ) {
+    console.error("No donation elements found");
+    return;
+  }
+
+  donateButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      checkoutButton.disabled = false;
+
+      // Remove the active class from all buttons
+      donateButtons.forEach((btn) => btn.classList.remove(activeClass));
+
+      // Toggle the active class on the clicked button
+      button.classList.add(activeClass);
+      // Show or hide the custom amount input based on the custom amount button's active status
+      if (button === customAmountButton) {
+        checkoutButton.disabled =
+          customAmountInput.value === "£" || customAmountInput.value === "";
+        console.log(customAmountInput.value);
+        customAmountInput.hidden = !button.classList.contains(activeClass);
+      } else {
+        customAmountInput.hidden = true;
+      }
+    });
+  });
+
+  customAmountInput.addEventListener(
+    "input",
+    () =>
+      (checkoutButton.disabled =
+        customAmountInput.value === "£" || customAmountInput.value === "")
+  );
+}
+
+// Single DOMContentLoaded event listener to initialize DOMContentLoaded functions
 document.addEventListener("DOMContentLoaded", function () {
   setupSmoothScrollLinks();
   setupNavbarLinkActivation();
+  setupCurrencyInputField();
+  setupDonationForm();
 });
 
 // Function to send emails

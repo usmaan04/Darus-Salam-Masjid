@@ -1,291 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="style.css" >
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="main.js"></script>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <style>
-        /* Reset some default styles */
-body, h2, h4, p, a {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
+      /* Reset some default styles */
+      body,
+      h2,
+      h4,
+      p,
+      a {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
 
-body {
-    background-color: #f8f8f8;
-    color: #333;
-}
+      body {
+        background-color: #f8f8f8;
+        color: #333;
+      }
 
-/* Base styles */
-.mobile {
-    padding: 20px;
-}
+      /* Base styles */
+      .mobile {
+        padding: 20px;
+      }
 
-.prayer-right {
-    text-align: center;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
-}
+      .prayer-right {
+        text-align: center;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin-top: 5px;
+      }
 
-.prayer-right h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 2px solid deepskyblue;
-    display: inline-block;
-    padding-bottom: 5px;
-}
+      .prayer-right h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 2px solid deepskyblue;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
 
-.prayer-right .jumuah-times h4 {
-    font-size: 20px;
-    color: #555;
-    margin: 0;
-}
+      .prayer-right .jumuah-times h4 {
+        font-size: 20px;
+        color: #555;
+        margin: 0;
+      }
 
-.prayer-right .jumuah-times .prayer-time-item {
-    margin-bottom: 20px;
-}
+      .prayer-right .jumuah-times .prayer-time-item {
+        margin-bottom: 20px;
+      }
 
-.prayer-right .jumuah-times p.times {
-    font-size: 22px;
-    color: deepskyblue;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
+      .prayer-right .jumuah-times p.times {
+        font-size: 22px;
+        color: deepskyblue;
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
 
-.download-container {
-    display: flex;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+      .download-container {
+        display: flex;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
 
-.download-section {
-    margin-top: 25px;
-    text-align: center;
-}
+      .download-section {
+        margin-top: 25px;
+        text-align: center;
+      }
 
-.download-section p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 10px;
-}
+      .download-section p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+      }
 
-.button {
-    --main-focus: #2d8cf0;
-    --font-color: black;
-    --bg-color-sub: deepskyblue;
-    --bg-color: deepskyblue;
-    --main-color: black;
-    position: relative;
-    width: 150px;
-    height: 40px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border: 2px solid var(--main-color);
-    box-shadow: 4px 4px var(--main-color);
-    background-color: var(--bg-color);
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-}
+      .button {
+        --main-focus: #2d8cf0;
+        --font-color: black;
+        --bg-color-sub: deepskyblue;
+        --bg-color: deepskyblue;
+        --main-color: black;
+        position: relative;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: 2px solid var(--main-color);
+        box-shadow: 4px 4px var(--main-color);
+        background-color: var(--bg-color);
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+      }
 
-.button,
-.button__icon,
-.button__text {
-    transition: all 0.3s;
-}
+      .button,
+      .button__icon,
+      .button__text {
+        transition: all 0.3s;
+      }
 
-.button .button__text {
-    color: var(--font-color);
-    font-weight: 600;
-    font-size: 10px;
-}
+      .button .button__text {
+        color: var(--font-color);
+        font-weight: 600;
+        font-size: 10px;
+      }
 
-.button .button__text.two {
-    transform: translateX(-10px);
-}
+      .button .button__text.two {
+        transform: translateX(-10px);
+      }
 
-.download-section .button {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: deepskyblue;
-    color: #fff;
-    padding: 10px 20px;
-    align-items: center;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease;
-    height: 60px;
-    width: 60px;
-}
-
-.download-section .button:hover {
-    transform: scale(1.05);
-}
-
-.download-section .button__text {
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-.download-section .button__icon {
-    width: 20px;
-    height: 20px;
-}
-
-.download-section .button__icon svg {
-    fill: #fff;
-}
-
-i {
-    font-size: 30px;
-    transition: 1s;
-}
-
-.button:hover i {
-    transform: scale(1.25);
-}
-
-.svgIcon {
-    fill: white;
-    transform: translateY(-5px);
-}
-
-.icon2 {
-    width: 18px;
-    height: 5px;
-    border-bottom: 2px solid white;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-}
-
-.button:hover .icon2 {
-    border-bottom: 2px solid white;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-}
-
-.button:hover .svgIcon {
-    fill: rgb(255, 255, 255);
-    animation: slide-in-top 1s linear infinite;
-}
-
-@keyframes slide-in-top {
-    0% {
-        transform: translateY(-10px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-/* Media queries for mobile responsiveness */
-@media only screen and (max-width: 768px) {
-    .mobile {
-        padding: 10px;
-    }
-
-    .prayer-container .prayer-right {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .download-section {
+      .download-section .button {
+        display: inline-flex;
         flex-direction: column;
-    }
+        align-items: center;
+        justify-content: center;
+        background: deepskyblue;
+        color: #fff;
+        padding: 10px 20px;
+        align-items: center;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background 0.3s ease, transform 0.3s ease;
+        height: 60px;
+        width: 60px;
+      }
 
-    .button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-}
+      .download-section .button:hover {
+        transform: scale(1.05);
+      }
 
-@media only screen and (max-width: 480px) {
-    .mobile {
-        padding: 5px;
-    }
+      .download-section .button__text {
+        margin-right: 10px;
+        font-weight: bold;
+      }
 
-    .prayer-container .prayer-right {
-        padding: 5px;
-    }
+      .download-section .button__icon {
+        width: 20px;
+        height: 20px;
+      }
 
-    .button {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
+      .download-section .button__icon svg {
+        fill: #fff;
+      }
 
-    .download-section p {
-        font-size: 14px;
-    }
-}
+      i {
+        font-size: 30px;
+        transition: 1s;
+      }
 
-@media only screen and (min-height: 915px){
-    .prayer-right {
-    text-align: center;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 25px;
-    }
-}
+      .button:hover i {
+        transform: scale(1.25);
+      }
 
+      .svgIcon {
+        fill: white;
+        transform: translateY(-5px);
+      }
 
+      .icon2 {
+        width: 18px;
+        height: 5px;
+        border-bottom: 2px solid white;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+      }
+
+      .button:hover .icon2 {
+        border-bottom: 2px solid white;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+      }
+
+      .button:hover .svgIcon {
+        fill: rgb(255, 255, 255);
+        animation: slide-in-top 1s linear infinite;
+      }
+
+      @keyframes slide-in-top {
+        0% {
+          transform: translateY(-10px);
+          opacity: 0;
+        }
+
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+
+      /* Media queries for mobile responsiveness */
+      @media only screen and (max-width: 768px) {
+        .mobile {
+          padding: 10px;
+        }
+
+        .prayer-container .prayer-right {
+          margin-left: 0;
+          padding: 10px;
+        }
+
+        .download-section {
+          flex-direction: column;
+        }
+
+        .button {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .mobile {
+          padding: 5px;
+        }
+
+        .prayer-container .prayer-right {
+          padding: 5px;
+        }
+
+        .button {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+
+        .download-section p {
+          font-size: 14px;
+        }
+      }
+
+      @media only screen and (min-height: 915px) {
+        .prayer-right {
+          text-align: center;
+          padding: 20px;
+          background: #ffffff;
+          border-radius: 15px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          margin-top: 25px;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="mobile">
-        <script type="text/javascript">(function(w){function async_load(){var s=w.document.createElement('script');s.type='text/javascript';s.async=true;s.defer=true;s.src='https://masjidbox.com/widgets/loader.js';var x=w.document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);} if(w.attachEvent)w.attachEvent('onload',async_load);else w.addEventListener('load',async_load,false);})(window);</script><a data-masjidbox-widget="P7p42aBwnsIBEjc-i5EFo" data-masjidbox-ifr href="https://masjidbox.com/prayer-times/darus-salam-masjid">Prayer times Darus Salam Masjid</a>
-        <div class="prayer-right">
-            <h2>Prayer Information</h2>
-            <div class="jumuah-times">
-                <h4>Salatul Jumuah Bayan</h4>
-                <p class="times">13:00</p>
-                <h4>Khutbah</h4>
-                <p class="times">13:30</p>
-            </div>
-            <div class="download-container">
-                <div class="download-section">
-                    <p>Return to website here</p>
-                    <a type="button" class="button" href="index.html" >
-                        <i class='bx bx-laptop'></i>
-                    </a>
-                </div>
-                <div class="download-section">
-                    <p>Download this month's timetable here</p>
-                    <a type="button" class="button" href="assets/bg.jpg" download="June">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="1em"
-                            viewBox="0 0 384 512"
-                            class="svgIcon"
-                        >
-                            <path
-                            d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-                            ></path>
-                        </svg>
-                        <span class="icon2"></span>
-                    </a>
-                </div>            
-            </div>   
+      <script type="text/javascript">
+        (function (w) {
+          function async_load() {
+            var s = w.document.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.defer = true;
+            s.src = "https://masjidbox.com/widgets/loader.js";
+            var x = w.document.getElementsByTagName("script")[0];
+            x.parentNode.insertBefore(s, x);
+          }
+          if (w.attachEvent) w.attachEvent("onload", async_load);
+          else w.addEventListener("load", async_load, false);
+        })(window);
+      </script>
+      <a
+        data-masjidbox-widget="P7p42aBwnsIBEjc-i5EFo"
+        data-masjidbox-ifr
+        href="https://masjidbox.com/prayer-times/darus-salam-masjid"
+        >Prayer times Darus Salam Masjid</a
+      >
+      <div class="prayer-right">
+        <h2>Prayer Information</h2>
+        <div class="jumuah-times">
+          <h4>Salatul Jumuah Bayan</h4>
+          <p class="times">13:00</p>
+          <h4>Khutbah</h4>
+          <p class="times">13:30</p>
         </div>
+        <div class="download-container">
+          <div class="download-section">
+            <p>Return to website here</p>
+            <a type="button" class="button" href="index.html">
+              <i class="bx bx-laptop"></i>
+            </a>
+          </div>
+          <div class="download-section">
+            <p>Download this month's timetable here</p>
+            <a
+              type="button"
+              class="button"
+              href="assets/bg.jpg"
+              download="June"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 384 512"
+                class="svgIcon"
+              >
+                <path
+                  d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                ></path>
+              </svg>
+              <span class="icon2"></span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    </body>
+  </body>
+</html>

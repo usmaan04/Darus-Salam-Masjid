@@ -57,9 +57,10 @@ nav img {
 /* Styling for the main header */
 nav {
   background: white;
-  padding: 20px 5%;
+  padding: 20px 5% 0 5%;
   display: flex;
   position: fixed;
+  justify-content: space-between;
   width: 100%;
   height: 70px;
   z-index: 2001;
@@ -68,7 +69,6 @@ nav {
 
 .navbar-left {
   font-family: Islamic;
-  margin-right: auto;
 }
 
 /* Styling for the name in the main header */
@@ -77,21 +77,11 @@ nav {
   color: black;
   text-decoration: none;
   font-weight: 600;
-  margin-right: auto;
   cursor: pointer;
 }
 
 .Name:hover {
   color: deepskyblue;
-}
-
-.navbar-middle {
-  text-align: center;
-  margin-right: 100px;
-}
-
-.navbar-right {
-  margin-right: 20px;
 }
 
 /* Styling for navigation bar links */
@@ -101,7 +91,6 @@ nav {
   color: black;
   text-decoration: none;
   font-weight: 100;
-  /* margin-left: 35px; */
   position: relative;
   padding: 10px 20px;
 }
@@ -112,6 +101,97 @@ nav {
 
 .navbar-middle a.option-selected {
   background: var(--navbar-option-hover);
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
+}
+@media(max-width:1200px) {
+  .navbar-middle a{
+    padding: 10px 15px;;
+  }
+
+  .Name{
+    font-size: 20px;
+  }
+}
+
+@media(max-width:900px) {
+
+  nav{
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .navbar-middle{
+    position: fixed;
+    display: flex;
+    top: 98px;
+    left: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar-middle a{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .navbar-right{
+    display: inline-flex;
+  }
+
+  nav a{
+      margin: 16px 0;
+  }
+
+  nav.active .navbar-middle{
+    left: 0;
+    display: flex;
+    max-height: 380px;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  .bar{
+    background-color: black;
+  }
+  
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+
+  }
+
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+
+  }
+
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
 }
 
 .donate {
@@ -127,89 +207,6 @@ nav {
   background: var(--navbar-option-hover);
   border-color: var(--navbar-option-hover);
   color: black;
-}
-
-@media screen and (max-device-width: 1200px) {
-  /* Styling for the header container */
-  #header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2000; /* Adjusted */
-  }
-
-  /* Styling for the name in the main header */
-  .Name {
-    font-size: 20px; /* Adjusted */
-    font-weight: bold;
-  }
-}
-
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 768px) {
-  /* Hide regular navigation links */
-  nav ul {
-    display: none;
-  }
-
-  /* Adjustments when hamburger menu is clicked */
-  nav ul.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  nav ul.active li {
-    margin: 10px 0;
-  }
-
-  .Name {
-    font-size: 18px; /* Adjusted */
-  }
-
-  /* Show hamburger icon */
-  .hamburger-menu {
-    display: block;
-  }
-
-  /* Styling for hamburger icon */
-  .hamburger-menu {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    background: deepskyblue;
-    border-radius: 3px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-
-  .hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-
-  .hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-
-  .hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
 }
 
 #cta {
@@ -1308,225 +1305,4 @@ footer.bottom {
 
 #footer .footer-right {
   margin-left: auto;
-}
-
-@media screen and (max-device-width: 1200px) {
-  /* Reset default margin, padding, and box-sizing for all elements */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* Set global styling for the body */
-  body {
-    color: deepskyblue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-
-  /* Styling for the main header */
-  nav {
-    background: white;
-    padding: 10px 5%; /* Adjusted */
-    display: flex;
-    justify-content: space-between; /* Adjusted */
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 60px; /* Adjusted */
-    z-index: 2001;
-    color: gray;
-  }
-
-  /* Styling for the logo image in the main header */
-  nav img {
-    max-width: 40px; /* Adjusted */
-    border-radius: 50%;
-    margin-right: 10px; /* Adjusted */
-  }
-
-  /* Styling for navigation bar links */
-  nav a {
-    font-size: 12px;
-    color: black;
-    text-decoration: none;
-    margin: 0 5px; /* Adjusted */
-  }
-  .nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-    }
-    
-    .navbar-middle {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #333;
-    }
-  
-    .navbar-middle a {
-      padding: 0.5em 0;
-    }
-  
-    .nav-toggle {
-      display: block;
-    }
-  
-    .nav-menu.active {
-      display: flex;
-    }
-  }
-
-  /* Styles for cta section */
-  #cta {
-    background: white;
-    width: 100%;
-    padding: 60px 5% 0; /* Adjusted */
-    color: #000;
-  }
-
-  /* Styling for the row layout */
-  #cta .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Adjusted */
-  }
-
-  /* Styling for the left column in the 'cta' section */
-  #cta .left {
-    flex-basis: 100%; /* Adjusted */
-  }
-
-  /* Styling for the heading */
-  #cta .left h1 {
-    font-size: 24px; /* Adjusted */
-    margin-bottom: 10px; /* Adjusted */
-  }
-
-  /* Styling for the interests paragraph */
-  #cta .left p.interests {
-    font-size: 14px; /* Adjusted */
-    margin-top: 5px; /* Adjusted */
-  }
-
-  /* Styling for the right column */
-  #cta .right {
-    flex-basis: 100%; /* Adjusted */
-  }
-
-  /* Styling for the image */
-  #cta .right img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Styling for the indicators */
-  .indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%); /* Adjusted */
-  }
-
-  /* Styling for the previous and next buttons */
-  .prev,
-  .next {
-    font-size: 24px; /* Adjusted */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); /* Adjusted */
-    color: black;
-    background: rgba(255, 255, 255, 0.8); /* Adjusted */
-    padding: 5px 10px; /* Adjusted */
-    border-radius: 5px; /* Adjusted */
-    cursor: pointer;
-  }
-
-  /* Styling for the footer */
-  #footer {
-    width: 100%;
-    font-size: 14px; /* Adjusted */
-    background: black;
-    padding: 30px 5%; /* Adjusted */
-    color: lightgray;
-    position: relative;
-  }
-
-  /* Styling for footer content */
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #footer .footer-left p {
-    margin: 10px 0; /* Adjusted */
-  }
-
-  #footer .footer-right ul {
-    list-style: none;
-    justify-content: flex-end;
-  }
-
-  #footer .footer-right ul li {
-    display: inline;
-    margin-left: 15px; /* Adjusted */
-  }
-
-  /* Media Query for Mobile Devices */
-  @media only screen and (max-width: 768px) {
-    /* Adjustments for smaller screens */
-    nav {
-      padding: 10px 3%; /* Adjusted */
-    }
-
-    nav img {
-      max-width: 30px; /* Adjusted */
-    }
-
-    nav a {
-      font-size: 10px; /* Adjusted */
-    }
-
-    #cta .left h1 {
-      font-size: 20px; /* Adjusted */
-    }
-
-    #cta .left p.interests {
-      font-size: 12px; /* Adjusted */
-    }
-
-    .prev,
-    .next {
-      font-size: 20px; /* Adjusted */
-    }
-
-    #footer {
-      font-size: 12px; /* Adjusted */
-      padding: 20px 3%; /* Adjusted */
-    }
-
-    #footer .footer-left p {
-      margin: 5px 0; /* Adjusted */
-    }
-  }
 }

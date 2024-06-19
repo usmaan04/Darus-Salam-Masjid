@@ -304,8 +304,8 @@ a.donate2:hover {
   align-content: center;
 }
 
-/* Styling for the row layout */
-#intro .row {
+/* Styling for the intro container layout */
+#intro .intro-container {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -1171,6 +1171,7 @@ footer.top {
   margin-left: 27.4%;
   display: grid;
   grid-template-rows: 1fr 1fr;
+  width: 64%;
 }
 
 .logo {
@@ -1188,6 +1189,9 @@ footer.top {
 .logo p {
   font-size: 25px;
   align-self: baseline;
+  margin: auto;
+  font-family: Islamic;
+  width: 30%;
 }
 
 .apps {

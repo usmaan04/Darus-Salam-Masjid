@@ -233,16 +233,18 @@ a.donate2:hover {
   color: #ffffff;
   font-family: Arial;
   position: relative;
-  height: 100vh;
+  height: 80vh;
   align-content: center;
 }
 
 /* Styling for the intro container layout */
 #intro .intro-container {
-  display: flex;
+  display: inline-grid;
   justify-content: space-between;
   align-items: start;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin-top: 10%;
+  gap: 10%;
 }
 
 /* Styling for the left column in the 'cta' section */
@@ -405,8 +407,6 @@ a.donate2:hover {
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   color: black;
-  position: absolute;
-  margin-top: 75px;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -1293,6 +1293,7 @@ footer.bottom {
     transition: 0.3s;
     max-height: 0;
     overflow: hidden;
+    width: 100vw;
   }
 
   .navbar-middle a{
@@ -1335,11 +1336,9 @@ footer.bottom {
   .hamburger.active .bar:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
   }
+}
 
-  .cta-left{
-    padding: 20px 25.4%;
-  }
-  
+@media screen and (max-width:700px) {  
 }
 
 @media screen and (min-width:500px){
@@ -1349,6 +1348,10 @@ footer.bottom {
 }
 
 @media screen and (max-width:500px) {  
+
+  nav{
+    padding: 20px 5% 20px;
+  }
 
   .navbar-right a.donate{
     display: none;

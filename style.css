@@ -1508,4 +1508,8 @@ footer.bottom {
   .download-section p {
     font-size: 14px;
   }
+
+  footer.bottom{
+    display: grid;
+  }
 }

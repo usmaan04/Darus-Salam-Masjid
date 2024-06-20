@@ -829,7 +829,8 @@ i {
 #donate {
   font-family: Tahoma;
   width: 100vw;
-  padding: 70px 11.4% 0;
+  padding-left: 11.4%;
+  padding-right: 11.4%;
 }
 
 #donate h1 {

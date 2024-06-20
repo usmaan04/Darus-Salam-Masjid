@@ -116,83 +116,6 @@ nav {
   -webkit-transition:all 0.3s ease-in-out;
   transition:all 0.3s ease-in-out;
 }
-@media(max-width:1200px) {
-  .navbar-middle a{
-    padding: 10px 15px;;
-  }
-
-  .Name{
-    font-size: 20px;
-  }
-}
-
-@media(max-width:900px) {
-
-  nav{
-    position: fixed;
-    top: 0px;
-    background-color: white;
-    width: 100%;
-    transition: 0.3s;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  .navbar-middle{
-    position: fixed;
-    display: flex;
-    top: 69px;
-    left: 0;
-    flex-direction: column;
-    background-color: white;
-    width: 100%;
-    transition: 0.3s;
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  .navbar-middle a{
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .navbar-right{
-    display: inline-flex;
-  }
-
-  nav a{
-      margin: 16px 0;
-  }
-
-  nav.active .navbar-middle{
-    left: 0;
-    display: flex;
-    max-height: 380px;
-  }
-
-  .hamburger{
-    display: block;
-  }
-
-  .bar{
-    background-color: black;
-  }
-  
-  .hamburger.active .bar:nth-child(2){
-    opacity: 0;
-
-  }
-
-  .hamburger.active .bar:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
-
-  }
-
-  .hamburger.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  
-}
 
 .donate {
   background: deepskyblue;
@@ -215,18 +138,20 @@ nav {
   display: grid;
   grid-template-columns: 2fr 2.5fr;
   z-index: 1200;
-  height: 500px;
+  height: 450px;
+  width: 100vw;
 }
 
 #cta .cta-left {
+  display: flex;
   background-color: black;
-  padding: 70px 0 0 25.4%;
+  align-items: center;
+  
 }
 
 .cta-content {
   width: 500px;
   top: 75px;
-  position: relative;
   
 }
 
@@ -1305,4 +1230,117 @@ footer.bottom {
 
 #footer .footer-right {
   margin-left: auto;
+}
+
+@media screen and (max-width:1200px) {
+  .navbar-middle a{
+    padding: 10px 15px;;
+  }
+}
+
+@media(min-width:1100px){
+  .cta-content{
+    transform: translateX(127px);
+    z-index: 2000;
+  }
+}
+
+@media(max-width:1100px) {
+
+  .cta-left{
+    width: 100vw;
+    justify-content: center;
+  }
+
+  
+
+  .cta-right{
+    display: none;
+  }
+}
+
+@media screen and (max-width:956px) {
+
+  nav{
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .Name{
+    font-size: 27px;
+  }
+
+  .navbar-middle{
+    position: fixed;
+    display: flex;
+    top: 69px;
+    left: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar-middle a{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .navbar-right{
+    display: inline-flex;
+  }
+
+  nav a{
+      margin: 16px 0;
+  }
+
+  nav.active .navbar-middle{
+    left: 0;
+    display: flex;
+    max-height: 380px;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  .bar{
+    background-color: black;
+  }
+  
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+
+  }
+
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+
+  }
+
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .cta-left{
+    padding: 20px 25.4%;
+  }
+  
+}
+
+@media screen and (max-width:500px) {
+  #cta{
+    height: 50vh;
+  }
+
+  .cta-content{
+    transform: scale(0.5);
+  }
 }

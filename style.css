@@ -302,7 +302,6 @@ a.donate2:hover {
   width: auto;
   height: 400px;
   border-radius: 15px;
-  box-shadow: 19px 20px 20px deepskyblue;
 }
 
 #intro .intro-right .carousel {
@@ -830,9 +829,8 @@ i {
 /* Styling for the donate section */
 #donate {
   font-family: Tahoma;
-  width: 100%;
+  width: 100vw;
   padding: 70px 11.4% 0;
-  margin-top: 20px;
 }
 
 #donate h1 {
@@ -858,7 +856,6 @@ i {
 #donate-container {
   width: 100%;
   background-color: rgb(0, 191, 255, 0.1);
-  display: grid;
   justify-content: space-between;
   position: static;
   height: fit-content;
@@ -1075,6 +1072,7 @@ i {
   font-family: Arial;
   z-index: -1;
   top: 50px;
+  width: 100vw;
 }
 
 footer {
@@ -1264,9 +1262,6 @@ footer.bottom {
   }
 }
 
-@media screen and (min-width:956px) {
-}
-
 @media screen and (max-width:956px) {
 
   nav{
@@ -1342,6 +1337,65 @@ footer.bottom {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width:956px){
+  footer.top{
+    grid-template-rows: 1fr;
+    grid-template-columns: unset;
+    padding: 70px 11.4% 0;
+  }
+
+  .logo-apps{
+    grid-template-columns: 1fr 1fr;
+    margin-left: 0;
+    width: 100%;
+    display: grid;
+    max-height: 200px;
+    
+  }
+
+  .apps{
+    margin-top: 0;
+  }
+
+  .quick-links{
+    margin-top: 20px;
+  }
+
+  .links,.details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .masjid-information{
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:800px){
+  .prayer-container,#contact-container,#donate-container{
+    display: grid;
+  }
+}
+
+@media screen and (max-width:800px){
+  .prayer-right,.donate-right{
+    margin-top: 20px;
+  }
+  
+  .contact-right {
+    background-color: #00bfff1a;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 0px;
+    flex-wrap: wrap;
+  }
+
+  .contact-right p{
+    overflow-wrap: break-word;
+  }
+}
+
 /* Media queries for mobile responsiveness */
 @media only screen and (max-width: 768px) {
   .mobile {
@@ -1360,29 +1414,29 @@ footer.bottom {
     font-size: 14px;
     padding: 8px 16px;
   }
-}
 
-@media screen and (min-width:800px){
-  .prayer-container,#contact-container{
-    display: grid;
+  footer.top{
+    grid-template-rows: 1fr;
+    grid-template-columns: unset;
+    padding: 70px 11.4% 0;
   }
-}
 
-@media screen and (max-width:800px){
-  .prayer-right{
+  .logo-apps{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .apps{
+    margin-top: 0;
+  }
+
+  .quick-links{
     margin-top: 20px;
   }
-  
-  .contact-right {
-    background-color: #00bfff1a;
-    margin-top: 20px;
-    text-align: left;
-    margin-left: 0px;
-    flex-wrap: wrap;
-  }
 
-  .contact-right p{
-    overflow-wrap: break-word;
+  .masjid-information{
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1390,12 +1444,16 @@ footer.bottom {
   .navbar-right .nav-mobile{
     display: none;
   }
+
+  .intro-right img{
+    box-shadow: 19px 20px 20px deepskyblue;
+}
 }
 
 @media screen and (max-width:500px) {  
 
   nav{
-    padding: 20px 5% 20px;
+    padding: 20px 5% 25px;
   }
 
   .navbar-right a.donate{

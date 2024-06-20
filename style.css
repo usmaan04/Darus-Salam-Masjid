@@ -627,12 +627,11 @@ i {
 #about-us {
   width: 100%;
   font-size: 18px;
-  padding: 70px 11.4% 0;
+  padding: 10px 11.4% 0;
   color: #ffffff;
   font-family: Arial;
   position: relative;
   z-index: -1;
-  top: 30px;
 }
 
 #about-us h1 {

@@ -211,7 +211,7 @@ nav {
 
 #cta {
   position: relative;
-  top: 100px;
+  top: 80px;
   display: grid;
   grid-template-columns: 2fr 2.5fr;
   z-index: 1200;

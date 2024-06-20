@@ -226,14 +226,11 @@ a.donate2:hover {
 
 /* Styles for cta section */
 #intro {
-  background: white;
   width: 100%;
   font-size: 20px;
   padding: 70px 11.4% 0;
-  color: #ffffff;
   font-family: Arial;
   position: relative;
-  height: 80vh;
   align-content: center;
 }
 
@@ -374,8 +371,8 @@ a.donate2:hover {
   list-style: none;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  margin: 30px 0
 }
 
 /* Styling for the tel and mail links */
@@ -425,8 +422,8 @@ a.donate2:hover {
 #prayer-times {
   padding: 70px 11.4% 70px;
   text-align: center;
-  height: 100vh;
   z-index: -1;
+  width: 100vw;
 }
 
 #prayer-times h1 {
@@ -452,7 +449,6 @@ a.donate2:hover {
 .prayer-container {
   width: 100%;
   background-color: rgb(0, 191, 255, 0.1);
-  display: grid;
   justify-content: space-between;
   position: static;
   height: fit-content;
@@ -460,6 +456,7 @@ a.donate2:hover {
   border-radius: 30px;
   padding: 30px;
   margin-top: 80px;
+  gap: 50px;
 }
 
 .prayer-container .prayer-right {
@@ -468,11 +465,9 @@ a.donate2:hover {
   background: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-left: 50px;
 }
 
 .prayer-container .prayer-right h2 {
-  font-size: 28px;
   color: #333;
   margin-bottom: 25px;
   text-transform: uppercase;
@@ -635,7 +630,6 @@ i {
   font-size: 18px;
   padding: 70px 11.4% 0;
   color: #ffffff;
-  margin-top: 10px;
   font-family: Arial;
   position: relative;
   z-index: -1;
@@ -991,7 +985,6 @@ i {
 }
 
 #contact-container {
-  display: grid;
   grid-template-columns: 2fr 2fr;
 }
 
@@ -1265,6 +1258,13 @@ footer.bottom {
   .cta-right{
     display: none;
   }
+
+  .facilities{
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  }
+}
+
+@media screen and (min-width:956px) {
 }
 
 @media screen and (max-width:956px) {
@@ -1336,9 +1336,54 @@ footer.bottom {
   .hamburger.active .bar:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
   }
+
+  #prayer-times{
+    padding: 120px 11.4% 70px;
+  }
 }
 
-@media screen and (max-width:700px) {  
+/* Media queries for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .mobile {
+    padding: 10px;
+  }
+
+  .prayer-left,.prayer-right {
+    width: 67vw;
+  }
+
+  .download-section {
+    flex-direction: column;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (min-width:800px){
+  .prayer-container,#contact-container{
+    display: grid;
+  }
+}
+
+@media screen and (max-width:800px){
+  .prayer-right{
+    margin-top: 20px;
+  }
+  
+  .contact-right {
+    background-color: #00bfff1a;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 0px;
+    flex-wrap: wrap;
+  }
+
+  .contact-right p{
+    overflow-wrap: break-word;
+  }
 }
 
 @media screen and (min-width:500px){
@@ -1369,4 +1414,41 @@ footer.bottom {
     transform: scale(0.8);
   }
 
+  .intro-container{
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  }
+
+  .intro-left{
+    width: 80vw;
+  }
+
+  .facilities{
+    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+  }
+
+  .intro-right{
+    width: 80vw;
+  }
+
+  .mobile {
+    padding: 5px;
+  }
+
+  .prayer-container{
+    padding: 22px;
+    width: 80vw;
+  }
+
+  .prayer-container .prayer-right {
+    padding: 15px;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .download-section p {
+    font-size: 14px;
+  }
 }

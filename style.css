@@ -61,7 +61,7 @@ nav {
   display: flex;
   position: fixed;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   height: 70px;
   z-index: 2001;
   color: gray;
@@ -93,6 +93,11 @@ nav {
   font-weight: 100;
   position: relative;
   padding: 10px 20px;
+}
+
+.navbar-right a.nav-mobile{
+  border-radius: 50%;
+  background-color: deepskyblue;
 }
 
 .navbar-middle a:hover {
@@ -1246,13 +1251,10 @@ footer.bottom {
 }
 
 @media(max-width:1100px) {
-
   .cta-left{
     width: 100vw;
     justify-content: center;
   }
-
-  
 
   .cta-right{
     display: none;
@@ -1265,7 +1267,6 @@ footer.bottom {
     position: fixed;
     top: 0px;
     background-color: white;
-    width: 100%;
     transition: 0.3s;
     display: inline-flex;
     align-items: center;
@@ -1335,12 +1336,28 @@ footer.bottom {
   
 }
 
-@media screen and (max-width:500px) {
+@media screen and (min-width:500px){
+  .navbar-right .nav-mobile{
+    display: none;
+  }
+}
+
+@media screen and (max-width:500px) {  
+
+  .navbar-right a.donate{
+    display: none;
+  }
+
+  .navbar-left a{
+    font-size: 20px;
+  }
+
   #cta{
     height: 50vh;
   }
 
   .cta-content{
-    transform: scale(0.5);
+    transform: scale(0.8);
   }
+
 }

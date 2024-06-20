@@ -57,7 +57,7 @@ nav img {
 /* Styling for the main header */
 nav {
   background: white;
-  padding: 20px 5% 0 5%;
+  padding: 20px 5% 0;
   display: flex;
   position: fixed;
   justify-content: space-between;
@@ -141,7 +141,7 @@ nav {
   .navbar-middle{
     position: fixed;
     display: flex;
-    top: 98px;
+    top: 69px;
     left: 0;
     flex-direction: column;
     background-color: white;

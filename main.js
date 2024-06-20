@@ -53,11 +53,20 @@ function setupNavbarLinkActivation() {
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('nav');
+  const navLinks = document.querySelectorAll('.navbar-middle a');
 
   hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       nav.classList.toggle('active');
   });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+    });
+  });
+
 });
 
 // Setup Currency field in Donate Section

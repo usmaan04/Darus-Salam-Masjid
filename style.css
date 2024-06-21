@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: clip;
 }
 
 /* Set global styling for the body */
@@ -57,7 +58,7 @@ nav img {
 /* Styling for the main header */
 nav {
   background: white;
-  padding: 20px 5% 0;
+  padding: 20px 5%;
   display: flex;
   position: fixed;
   justify-content: space-between;
@@ -157,7 +158,7 @@ nav {
   display: flex;
   background-color: black;
   align-items: center;
-  
+  overflow-x: visible;
 }
 
 .cta-content {
@@ -226,7 +227,7 @@ a.donate2:hover {
 
 /* Styles for cta section */
 #intro {
-  width: 100%;
+  width: 100vw;
   font-size: 20px;
   padding: 70px 11.4% 0;
   font-family: Arial;
@@ -840,6 +841,7 @@ i {
   margin-bottom: 20px;
   position: relative;
   z-index: -1;
+  width: fit-content;
 }
 
 /* Styling for the heading underline effect */
@@ -848,7 +850,7 @@ i {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 11%;
+  width: 100%;
   height: 4px;
   background-color: deepskyblue;
 }
@@ -861,7 +863,7 @@ i {
   height: fit-content;
   grid-template-columns: 3fr 2fr;
   border-radius: 30px;
-  padding: 40px;
+  padding: 20px;
   column-gap: 24px;
 }
 
@@ -1253,6 +1255,10 @@ footer.bottom {
     justify-content: center;
   }
 
+  .cta-content{
+    text-align: center;
+  }
+
   .cta-right{
     display: none;
   }
@@ -1308,6 +1314,7 @@ footer.bottom {
     left: 0;
     display: flex;
     max-height: 380px;
+    border-bottom: 2px solid gray;
   }
 
   .hamburger{
@@ -1444,10 +1451,6 @@ footer.bottom {
   .navbar-right .nav-mobile{
     display: none;
   }
-
-  .intro-right img{
-    box-shadow: 19px 20px 20px deepskyblue;
-}
 }
 
 @media screen and (max-width:500px) {  

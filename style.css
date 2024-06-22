@@ -319,54 +319,6 @@ a.donate2:hover {
   transition: 0.5s fade;
 }
 
-/* Styling for the indicators */
-.indicators {
-  position: absolute;
-  bottom: 10px;
-}
-
-.indicator {
-  display: none;
-  width: 10px;
-  height: 10px;
-  background-color: #bbb;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.indicator.active {
-  background-color: #333;
-}
-
-.prev {
-  left: 31%;
-}
-
-.next {
-  left: 60%;
-}
-
-.prev,
-.next {
-  font-size: 50px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  padding: 0;
-  color: black;
-  text-align: center;
-  background: 0 0;
-  border: 0;
-  opacity: 0.5;
-  transition: opacity 0.15s ease;
-}
-
 .facilities {
   list-style: none;
   display: grid;
@@ -460,7 +412,6 @@ a.donate2:hover {
 }
 
 .prayer-container .prayer-right {
-  text-align: left;
   padding: 20px;
   background: #ffffff;
   border-radius: 15px;
@@ -1377,6 +1328,7 @@ footer.bottom {
     margin-top: 40px;
     margin-bottom: 20px;
   }
+
 }
 
 @media screen and (min-width:800px){
@@ -1452,6 +1404,10 @@ footer.bottom {
 @media screen and (min-width:500px){
   .navbar-right .nav-mobile{
     display: none;
+  }
+
+  #footer .footer-right {
+    text-align: end;
   }
 }
 

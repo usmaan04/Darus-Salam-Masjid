@@ -11,7 +11,11 @@ function setupSmoothScrollLinks() {
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
-        const offset = targetSection.offsetTop;
+      let offset = targetSection.offsetTop;
+      // Adjust offset for specific target IDs
+      if (targetId === 'donate' || targetId === 'about-us') {
+        offset -= 70;
+      }
         window.scrollTo({ top: offset, behavior: "smooth" });
       }
     });
@@ -24,7 +28,7 @@ function setupNavbarLinkActivation() {
   const sections = document.querySelectorAll("section");
 
   function activateLink() {
-    const buffer = 40;
+    const buffer = 80;
     let index = sections.length;
 
     while (--index && window.scrollY + buffer < sections[index].offsetTop) {}

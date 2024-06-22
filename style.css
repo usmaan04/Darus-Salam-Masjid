@@ -66,6 +66,7 @@ nav {
   height: 70px;
   z-index: 2001;
   color: gray;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-left {

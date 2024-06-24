@@ -1266,7 +1266,7 @@ footer.bottom {
     left: 0;
     display: flex;
     max-height: 380px;
-    border-bottom: 2px solid gray;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   }
 
   .hamburger{

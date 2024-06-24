@@ -106,21 +106,37 @@ function formatCurrency(input, blur) {
 
 // setup donation form
 function setupDonationForm() {
+  const donateForm = document.getElementById("donate-form");
   const donateButtons = document.querySelectorAll(".donate-button");
-  const customAmountButton = document.querySelector(".custom-amount");
+  const customAmountButton = document.getElementById("custom-amount");
   const customAmountInput = document.getElementById("donate-input");
   const checkoutButton = document.getElementById("checkout");
   const activeClass = "donate-button--active";
+  let selectedAmount = 0;
 
   if (
+    donateForm === null ||
     donateButtons.length === 0 ||
     customAmountButton === null ||
     customAmountInput === null ||
     checkoutButton === null
   ) {
-    console.error("No donation elements found");
+    console.error("Donation Element(s) Not Found!");
     return;
   }
+
+  // For testing purposes -------------------------
+  const reset = document.getElementById("reset");
+  reset.addEventListener("click", () =>
+    donateButtons.forEach((btn) => {
+      btn.classList.remove(activeClass);
+      selectedAmount = 0;
+      customAmountInput.hidden = true;
+      customAmountInput.value = "";
+      checkoutButton.disabled = true;
+    })
+  );
+  // ----------------------------------------------
 
   donateButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -131,24 +147,56 @@ function setupDonationForm() {
 
       // Toggle the active class on the clicked button
       button.classList.add(activeClass);
+
       // Show or hide the custom amount input based on the custom amount button's active status
-      if (button === customAmountButton) {
-        checkoutButton.disabled =
-          customAmountInput.value === "£" || customAmountInput.value === "";
-        console.log(customAmountInput.value);
-        customAmountInput.hidden = !button.classList.contains(activeClass);
-      } else {
-        customAmountInput.hidden = true;
-      }
+      customAmountInput.hidden = button !== customAmountButton;
+
+      // Resetting custom amount input value if it is hidden
+      customAmountInput.value = customAmountInput.hidden
+        ? ""
+        : customAmountInput.value;
+
+      // Change selected amount to selected button, or 0 if custom amount button is pressed
+      selectedAmount =
+        button === customAmountButton
+          ? 0
+          : parseInt(button.textContent.replace("£", "")) * 100;
+
+      updateCheckoutButtonState();
+    });
+
+    customAmountInput.addEventListener("input", () => {
+      const inputValue = customAmountInput.value.replace("£", "");
+      checkoutButton.disabled = inputValue === "";
+      selectedAmount = parseInt(inputValue) * 100;
+      updateCheckoutButtonState();
     });
   });
 
-  customAmountInput.addEventListener(
-    "input",
-    () =>
-      (checkoutButton.disabled =
-        customAmountInput.value === "£" || customAmountInput.value === "")
-  );
+  const updateCheckoutButtonState = () =>
+    (checkoutButton.disabled = selectedAmount === 0);
+
+  donateForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (customAmountButton.classList.contains(activeClass)) {
+      selectedAmount = parseInt(
+        customAmountInput.value
+          .replace("£", "")
+          .replace(".", "")
+          .replace(",", "")
+      );
+    }
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/create-checkout-session",
+        { amount: selectedAmount }
+      );
+      const { url } = response.data;
+      if (url) window.location.href = url;
+    } catch (e) {
+      console.error(e);
+    }
+  });
 }
 
 // Single DOMContentLoaded event listener to initialize DOMContentLoaded functions

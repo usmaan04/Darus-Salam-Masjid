@@ -11,7 +11,11 @@ function setupSmoothScrollLinks() {
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
-        const offset = targetSection.offsetTop;
+        let offset = targetSection.offsetTop;
+        // Adjust offset for specific target IDs
+        if (targetId === "donate" || targetId === "about-us") {
+          offset -= 70;
+        }
         window.scrollTo({ top: offset, behavior: "smooth" });
       }
     });
@@ -24,7 +28,7 @@ function setupNavbarLinkActivation() {
   const sections = document.querySelectorAll("section");
 
   function activateLink() {
-    const buffer = 40;
+    const buffer = 80;
     let index = sections.length;
 
     while (--index && window.scrollY + buffer < sections[index].offsetTop) {}
@@ -46,6 +50,25 @@ function setupNavbarLinkActivation() {
   activateLink();
   window.addEventListener("scroll", () => {
     requestAnimationFrame(activateLink);
+  });
+}
+
+// Toggle the navigation menu for mobile view
+function toggleNavMenu() {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+  const navLinks = document.querySelectorAll(".navbar-middle a");
+
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      hamburger.classList.remove("active");
+      nav.classList.remove("active");
+    });
   });
 }
 
@@ -125,19 +148,6 @@ function setupDonationForm() {
     return;
   }
 
-  // For testing purposes -------------------------
-  const reset = document.getElementById("reset");
-  reset.addEventListener("click", () =>
-    donateButtons.forEach((btn) => {
-      btn.classList.remove(activeClass);
-      selectedAmount = 0;
-      customAmountInput.hidden = true;
-      customAmountInput.value = "";
-      checkoutButton.disabled = true;
-    })
-  );
-  // ----------------------------------------------
-
   donateButtons.forEach((button) => {
     button.addEventListener("click", function () {
       checkoutButton.disabled = false;
@@ -205,6 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupNavbarLinkActivation();
   setupCurrencyInputField();
   setupDonationForm();
+  toggleNavMenu();
 });
 
 // Function to send emails

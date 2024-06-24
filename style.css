@@ -9,12 +9,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: clip;
 }
 
 /* Set global styling for the body */
 body {
   color: deepskyblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+  font-family: Islamic;
+  src: url(assets/AlFitrahRamadhan-zr89X.otf);
 }
 
 h1 {
@@ -54,26 +60,25 @@ nav {
   background: white;
   padding: 20px 5%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
-  width: 100%;
+  justify-content: space-between;
+  width: 100vw;
   height: 70px;
   z-index: 2001;
   color: gray;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-left {
-  margin-right: auto;
+  font-family: Islamic;
 }
 
 /* Styling for the name in the main header */
 .Name {
-  font-size: 25px;
+  font-size: 27px;
   color: black;
   text-decoration: none;
   font-weight: 600;
-  margin-right: auto;
   cursor: pointer;
 }
 
@@ -81,25 +86,26 @@ nav {
   color: deepskyblue;
 }
 
-.navbar-middle {
-  text-align: center;
-  margin-right: 100px;
-}
-
-.navbar-right {
-  margin-right: 20px;
-}
-
 /* Styling for navigation bar links */
 .navbar-middle a,
-.navbar-right a {
+.navbar-right a.donate {
   font-size: 12px;
   color: black;
   text-decoration: none;
   font-weight: 100;
-  /* margin-left: 35px; */
   position: relative;
   padding: 10px 20px;
+}
+
+.navbar-right a.nav-mobile{
+  border-radius: 50%;
+  background-color: deepskyblue;
+  padding: 12px;
+}
+
+.navbar-right a.nav-mobile i{
+  font-size: 32px;
+  color: black;
 }
 
 .navbar-middle a:hover {
@@ -108,6 +114,20 @@ nav {
 
 .navbar-middle a.option-selected {
   background: var(--navbar-option-hover);
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
 }
 
 .donate {
@@ -125,111 +145,32 @@ nav {
   color: black;
 }
 
-@media screen and (max-device-width: 1200px) {
-  /* Styling for the header container */
-  #header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2000; /* Adjusted */
-  }
-
-  /* Styling for the name in the main header */
-  .Name {
-    font-size: 20px; /* Adjusted */
-    font-weight: bold;
-  }
-}
-
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 768px) {
-  /* Hide regular navigation links */
-  nav ul {
-    display: none;
-  }
-
-  /* Adjustments when hamburger menu is clicked */
-  nav ul.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  nav ul.active li {
-    margin: 10px 0;
-  }
-
-  .Name {
-    font-size: 18px; /* Adjusted */
-  }
-
-  /* Show hamburger icon */
-  .hamburger-menu {
-    display: block;
-  }
-
-  /* Styling for hamburger icon */
-  .hamburger-menu {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    background: deepskyblue;
-    border-radius: 3px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-
-  .hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-
-  .hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-
-  .hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-}
-
 #cta {
   position: relative;
-  top: 100px;
+  top: 80px;
   display: grid;
   grid-template-columns: 2fr 2.5fr;
   z-index: 1200;
-  height: 500px;
+  height: 450px;
+  width: 100vw;
 }
 
 #cta .cta-left {
+  display: flex;
   background-color: black;
-  padding: 70px 0 0 25.4%;
+  align-items: center;
+  overflow-x: visible;
 }
 
 .cta-content {
   width: 500px;
   top: 75px;
-  position: relative;
+  
 }
 
 .cta-content h2 {
   color: white;
+  font-family: Islamic;
 }
 
 .cta-content span {
@@ -243,7 +184,6 @@ nav {
   margin-bottom: 50px;
   z-index: 1999;
   position: relative;
-  font-family: sans-serif;
 }
 
 a.donate2 {
@@ -288,23 +228,22 @@ a.donate2:hover {
 
 /* Styles for cta section */
 #intro {
-  background: white;
-  width: 100%;
+  width: 100vw;
   font-size: 20px;
   padding: 70px 11.4% 0;
-  color: #ffffff;
   font-family: Arial;
   position: relative;
-  height: 100vh;
   align-content: center;
 }
 
-/* Styling for the row layout */
-#intro .row {
-  display: flex;
+/* Styling for the intro container layout */
+#intro .intro-container {
+  display: inline-grid;
   justify-content: space-between;
   align-items: start;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin-top: 10%;
+  gap: 10%;
 }
 
 /* Styling for the left column in the 'cta' section */
@@ -315,9 +254,11 @@ a.donate2:hover {
 #intro .intro-left h3 {
   color: deepskyblue;
   padding-bottom: 10px;
-  font-size: 15px;
+  font-size: 20px;
   position: relative;
   display: inline-block;
+  font-family: Islamic;
+  
 }
 
 /* Styling for the heading */
@@ -363,7 +304,6 @@ a.donate2:hover {
   width: auto;
   height: 400px;
   border-radius: 15px;
-  box-shadow: 19px 20px 20px deepskyblue;
 }
 
 #intro .intro-right .carousel {
@@ -380,60 +320,12 @@ a.donate2:hover {
   transition: 0.5s fade;
 }
 
-/* Styling for the indicators */
-.indicators {
-  position: absolute;
-  bottom: 10px;
-}
-
-.indicator {
-  display: none;
-  width: 10px;
-  height: 10px;
-  background-color: #bbb;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.indicator.active {
-  background-color: #333;
-}
-
-.prev {
-  left: 31%;
-}
-
-.next {
-  left: 60%;
-}
-
-.prev,
-.next {
-  font-size: 50px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  padding: 0;
-  color: black;
-  text-align: center;
-  background: 0 0;
-  border: 0;
-  opacity: 0.5;
-  transition: opacity 0.15s ease;
-}
-
 .facilities {
   list-style: none;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  margin: 30px 0
 }
 
 /* Styling for the tel and mail links */
@@ -465,8 +357,6 @@ a.donate2:hover {
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   color: black;
-  position: absolute;
-  margin-top: 75px;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -485,8 +375,8 @@ a.donate2:hover {
 #prayer-times {
   padding: 70px 11.4% 70px;
   text-align: center;
-  height: 100vh;
   z-index: -1;
+  width: 100vw;
 }
 
 #prayer-times h1 {
@@ -512,7 +402,6 @@ a.donate2:hover {
 .prayer-container {
   width: 100%;
   background-color: rgb(0, 191, 255, 0.1);
-  display: grid;
   justify-content: space-between;
   position: static;
   height: fit-content;
@@ -520,19 +409,17 @@ a.donate2:hover {
   border-radius: 30px;
   padding: 30px;
   margin-top: 80px;
+  gap: 50px;
 }
 
 .prayer-container .prayer-right {
-  text-align: left;
   padding: 20px;
   background: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-left: 50px;
 }
 
 .prayer-container .prayer-right h2 {
-  font-size: 28px;
   color: #333;
   margin-bottom: 25px;
   text-transform: uppercase;
@@ -543,9 +430,10 @@ a.donate2:hover {
 }
 
 .prayer-container .prayer-right .jumuah-times h4 {
-  font-size: 20px;
+  font-size: 25px;
   color: #555;
   margin: 0;
+  font-family: Islamic;
 }
 
 .prayer-container .prayer-right .jumuah-times .prayer-time-item {
@@ -573,6 +461,7 @@ a.donate2:hover {
   color: #666;
   margin-bottom: 10px;
 }
+
 .button {
   --main-focus: #2d8cf0;
   --font-color: black;
@@ -691,13 +580,11 @@ i {
 #about-us {
   width: 100%;
   font-size: 18px;
-  padding: 70px 11.4% 0;
+  padding: 10px 11.4% 0;
   color: #ffffff;
-  margin-top: 10px;
   font-family: Arial;
   position: relative;
   z-index: -1;
-  top: 30px;
 }
 
 #about-us h1 {
@@ -843,7 +730,8 @@ i {
 
 .timeline ul li h2 {
   color: var(--font-color);
-  font-size: 1.4rem;
+  font-size: 1.7rem;
+  font-family: Islamic;
 }
 
 .timeline ul li p {
@@ -893,9 +781,9 @@ i {
 /* Styling for the donate section */
 #donate {
   font-family: Tahoma;
-  width: 100%;
-  padding: 70px 11.4% 0;
-  margin-top: 20px;
+  width: 100vw;
+  padding-left: 11.4%;
+  padding-right: 11.4%;
 }
 
 #donate h1 {
@@ -905,6 +793,7 @@ i {
   margin-bottom: 20px;
   position: relative;
   z-index: -1;
+  width: fit-content;
 }
 
 /* Styling for the heading underline effect */
@@ -913,7 +802,7 @@ i {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 11%;
+  width: 100%;
   height: 4px;
   background-color: deepskyblue;
 }
@@ -921,13 +810,12 @@ i {
 #donate-container {
   width: 100%;
   background-color: rgb(0, 191, 255, 0.1);
-  display: grid;
   justify-content: space-between;
   position: static;
   height: fit-content;
   grid-template-columns: 3fr 2fr;
   border-radius: 30px;
-  padding: 40px;
+  padding: 20px;
   column-gap: 24px;
 }
 
@@ -1048,7 +936,6 @@ i {
 }
 
 #contact-container {
-  display: grid;
   grid-template-columns: 2fr 2fr;
 }
 
@@ -1139,6 +1026,7 @@ i {
   font-family: Arial;
   z-index: -1;
   top: 50px;
+  width: 100vw;
 }
 
 footer {
@@ -1161,6 +1049,7 @@ footer.top {
   margin-left: 27.4%;
   display: grid;
   grid-template-rows: 1fr 1fr;
+  width: 64%;
 }
 
 .logo {
@@ -1178,6 +1067,9 @@ footer.top {
 .logo p {
   font-size: 25px;
   align-self: baseline;
+  margin: auto;
+  font-family: Islamic;
+  width: 30%;
 }
 
 .apps {
@@ -1296,182 +1188,293 @@ footer.bottom {
   margin-left: auto;
 }
 
-@media screen and (max-device-width: 1200px) {
-  /* Reset default margin, padding, and box-sizing for all elements */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* Set global styling for the body */
-  body {
-    color: deepskyblue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-
-  /* Styling for the main header */
-  nav {
-    background: white;
-    padding: 10px 5%; /* Adjusted */
-    display: flex;
-    justify-content: space-between; /* Adjusted */
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 60px; /* Adjusted */
-    z-index: 2001;
-    color: gray;
-  }
-
-  /* Styling for the logo image in the main header */
-  nav img {
-    max-width: 40px; /* Adjusted */
-    border-radius: 50%;
-    margin-right: 10px; /* Adjusted */
-  }
-
-  /* Styling for navigation bar links */
-  nav a {
-    font-size: 12px;
-    color: black;
-    text-decoration: none;
-    margin: 0 5px; /* Adjusted */
-  }
-
-  /* Styles for cta section */
-  #cta {
-    background: white;
-    width: 100%;
-    padding: 60px 5% 0; /* Adjusted */
-    color: #000;
-  }
-
-  /* Styling for the row layout */
-  #cta .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Adjusted */
-  }
-
-  /* Styling for the left column in the 'cta' section */
-  #cta .left {
-    flex-basis: 100%; /* Adjusted */
-  }
-
-  /* Styling for the heading */
-  #cta .left h1 {
-    font-size: 24px; /* Adjusted */
-    margin-bottom: 10px; /* Adjusted */
-  }
-
-  /* Styling for the interests paragraph */
-  #cta .left p.interests {
-    font-size: 14px; /* Adjusted */
-    margin-top: 5px; /* Adjusted */
-  }
-
-  /* Styling for the right column */
-  #cta .right {
-    flex-basis: 100%; /* Adjusted */
-  }
-
-  /* Styling for the image */
-  #cta .right img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Styling for the indicators */
-  .indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%); /* Adjusted */
-  }
-
-  /* Styling for the previous and next buttons */
-  .prev,
-  .next {
-    font-size: 24px; /* Adjusted */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); /* Adjusted */
-    color: black;
-    background: rgba(255, 255, 255, 0.8); /* Adjusted */
-    padding: 5px 10px; /* Adjusted */
-    border-radius: 5px; /* Adjusted */
-    cursor: pointer;
-  }
-
-  /* Styling for the footer */
-  #footer {
-    width: 100%;
-    font-size: 14px; /* Adjusted */
-    background: black;
-    padding: 30px 5%; /* Adjusted */
-    color: lightgray;
-    position: relative;
-  }
-
-  /* Styling for footer content */
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #footer .footer-left p {
-    margin: 10px 0; /* Adjusted */
-  }
-
-  #footer .footer-right ul {
-    list-style: none;
-    justify-content: flex-end;
-  }
-
-  #footer .footer-right ul li {
-    display: inline;
-    margin-left: 15px; /* Adjusted */
-  }
-
-  /* Media Query for Mobile Devices */
-  @media only screen and (max-width: 768px) {
-    /* Adjustments for smaller screens */
-    nav {
-      padding: 10px 3%; /* Adjusted */
-    }
-
-    nav img {
-      max-width: 30px; /* Adjusted */
-    }
-
-    nav a {
-      font-size: 10px; /* Adjusted */
-    }
-
-    #cta .left h1 {
-      font-size: 20px; /* Adjusted */
-    }
-
-    #cta .left p.interests {
-      font-size: 12px; /* Adjusted */
-    }
-
-    .prev,
-    .next {
-      font-size: 20px; /* Adjusted */
-    }
-
-    #footer {
-      font-size: 12px; /* Adjusted */
-      padding: 20px 3%; /* Adjusted */
-    }
-
-    #footer .footer-left p {
-      margin: 5px 0; /* Adjusted */
-    }
+@media screen and (max-width:1200px) {
+  .navbar-middle a{
+    padding: 10px 15px;;
   }
 }
+
+@media(min-width:1100px){
+  .cta-content{
+    transform: translateX(127px);
+    z-index: 2000;
+  }
+}
+
+@media(max-width:1100px) {
+  .cta-left{
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .cta-content{
+    text-align: center;
+  }
+
+  .cta-right{
+    display: none;
+  }
+
+  .facilities{
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  }
+}
+
+@media screen and (max-width:956px) {
+
+  nav{
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .Name{
+    font-size: 27px;
+  }
+
+  .navbar-middle{
+    position: fixed;
+    display: flex;
+    top: 69px;
+    left: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    max-height: 0;
+    overflow: hidden;
+    width: 100vw;
+  }
+
+  .navbar-middle a{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .navbar-right{
+    display: inline-flex;
+  }
+
+  nav a{
+      margin: 16px 0;
+  }
+
+  nav.active .navbar-middle{
+    left: 0;
+    display: flex;
+    max-height: 380px;
+    border-bottom: 2px solid gray;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  .bar{
+    background-color: black;
+  }
+  
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+
+  }
+
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+
+  }
+
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #prayer-times{
+    padding: 120px 11.4% 70px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width:956px){
+  footer.top{
+    grid-template-rows: 1fr;
+    grid-template-columns: unset;
+    padding: 70px 11.4% 0;
+  }
+
+  .logo-apps{
+    grid-template-columns: 1fr 1fr;
+    margin-left: 0;
+    width: 100%;
+    display: grid;
+    max-height: 200px;
+    
+  }
+
+  .apps{
+    margin-top: 0;
+  }
+
+  .quick-links{
+    margin-top: 20px;
+  }
+
+  .links,.details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .masjid-information{
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media screen and (min-width:800px){
+  .prayer-container,#contact-container,#donate-container{
+    display: grid;
+  }
+}
+
+@media screen and (max-width:800px){
+  .prayer-right,.donate-right{
+    margin-top: 20px;
+  }
+  
+  .contact-right {
+    background-color: #00bfff1a;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 0px;
+    flex-wrap: wrap;
+  }
+
+  .contact-right p{
+    overflow-wrap: break-word;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+/* Media queries for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .mobile {
+    padding: 10px;
+  }
+
+  .prayer-left,.prayer-right {
+    width: 67vw;
+  }
+
+  .download-section {
+    flex-direction: column;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  footer.top{
+    grid-template-rows: 1fr;
+    grid-template-columns: unset;
+    padding: 70px 11.4% 0;
+  }
+
+  .logo-apps{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .apps{
+    margin-top: 0;
+  }
+
+  .quick-links{
+    margin-top: 20px;
+  }
+
+  .masjid-information{
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width:500px){
+  .navbar-right .nav-mobile{
+    display: none;
+  }
+
+  #footer .footer-right {
+    text-align: end;
+  }
+}
+
+@media screen and (max-width:500px) {  
+
+  nav{
+    padding: 20px 5% 25px;
+  }
+
+  .navbar-right a.donate{
+    display: none;
+  }
+
+  .navbar-left a{
+    font-size: 20px;
+  }
+
+  #cta{
+    height: 50vh;
+  }
+
+  .cta-content{
+    transform: scale(0.8);
+  }
+
+  .intro-container{
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  }
+
+  .intro-left{
+    width: 80vw;
+  }
+
+  .facilities{
+    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+  }
+
+  .intro-right{
+    width: 80vw;
+  }
+
+  .mobile {
+    padding: 5px;
+  }
+
+  .prayer-container{
+    padding: 22px;
+    width: 80vw;
+  }
+
+  .prayer-container .prayer-right {
+    padding: 15px;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .download-section p {
+    font-size: 14px;
+  }
+
+  footer.bottom{
+    display: grid;
+  }
+}
+
+

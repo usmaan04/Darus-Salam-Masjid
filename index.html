@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Darus Salam Masjid</title>
+    <link rel="icon" type="image/png" href="assets/logo.PNG" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="main.js"></script>
     <link
@@ -32,16 +33,18 @@
               <a href="#donate">Donate</a>
               <a href="#contact-us">Contact Us</a>
             </div>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
             <div class="navbar-right">
               <a class="donate" href="mobile.html">View Mobile Timetable</a>
+              <a type="button" class="nav-mobile" href="mobile.html">
+                <i class="bx bx-mobile-alt"></i>
+              </a>
             </div>
           </nav>
-          <!-- HTML for the hamburger menu icon -->
-          <div class="hamburger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
         </header>
       </section>
 
@@ -61,7 +64,7 @@
 
       <!-- Intro Section -->
       <section id="intro">
-        <div class="row">
+        <div class="intro-container">
           <div class="intro-left">
             <h3>Assalamualaikum</h3>
             <h1>
@@ -106,7 +109,6 @@
               <img src="assets/down1.jpg" alt="Mosque 2" />
               <img src="assets/2.jpg" alt="Mosque 3" />
             </div>
-            <div class="indicators"></div>
           </div>
         </div>
       </section>
@@ -223,9 +225,6 @@
         <div id="donate-container">
           <div class="donate-left">
             <form id="donate-form">
-              <!-- --------- TESTING PURPOSES ----------- -->
-              <button id="reset" type="button">reset</button>
-              <!-- -------------------------------------- -->
               <button class="donate-button" type="button" value="500">
                 £5
               </button>
@@ -237,6 +236,9 @@
               </button>
               <button class="donate-button" type="button" value="5000">
                 £50
+              </button>
+              <button class="donate-button" type="button" value="10000">
+                £100
               </button>
               <button
                 id="custom-amount"
@@ -269,8 +271,7 @@
           </div>
           <div class="donate-right">
             <p>
-              “Charity does not decrease wealth, no one forgives another but
-              that Allah increases his honour, and no one humbles himself for
+              “Charity does not decrease wealth, and no one humbles himself for
               the sake of Allah but that Allah raises his status.”
             </p>
             <p>Sahih Muslim 2588</p>
@@ -368,7 +369,8 @@
         <footer class="top">
           <div class="logo-apps">
             <div class="logo">
-              <img src="assets/logo2.jpg" alt="" />
+              <img src="assets/logo.png" alt="" />
+              <p>Darus Salam Masjid</p>
             </div>
             <div class="apps">
               <h3 class="prompt">Download our App</h3>
@@ -437,7 +439,7 @@
 
           <div class="masjid-information">
             <h3>Masjid Information</h3>
-            <ul class="masjid-information">
+            <ul class="information">
               <li>
                 <i class="bx bx-map"></i>
                 <p>48 Cook St, Wednesbury WS10 9RW</p>

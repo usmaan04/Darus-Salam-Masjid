@@ -210,64 +210,76 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function to send emails
 function validateForm() {
   // Get form values
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  const email = document.getElementById('email').value;
-  const confirmEmail = document.getElementById('confirmEmail').value;
-  const phone = document.getElementById('phone').value;
-  const contactPreference = document.getElementById('contactPreference').value;
-  const subject = document.getElementById('subject').value;
-  const message = document.getElementById('message').value;
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+  const confirmEmail = document.getElementById("confirmEmail").value;
+  const phone = document.getElementById("phone").value;
+  const contactPreference = document.getElementById("contactPreference").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
 
   // Validate required fields
-  if (firstName === '' || lastName === '' || email === '' || confirmEmail === '' || phone === '' || subject === '' || message === '') {
-      alert('Please fill in all required fields.');
-      return;
+  if (
+    firstName === "" ||
+    lastName === "" ||
+    email === "" ||
+    confirmEmail === "" ||
+    phone === "" ||
+    subject === "" ||
+    message === ""
+  ) {
+    alert("Please fill in all required fields.");
+    return;
   }
 
   // Regular expression to check if the email is anything@anything.anything
-  function validateEmail(){
+  function validateEmail() {
     var re = /\S+@\S+\.\S+/;
-    if ( re.test(email) == false){
-      alert('Please enter a valid email address');
+    if (re.test(email) == false) {
+      alert("Please enter a valid email address");
       return false;
     }
     return true;
   }
-  
+
   // Regular expression to check if the phone number starts with 0 and is 11 digits long
   function validatePhoneNumber(phone) {
     const phoneRegex = /^0\d{10}$/;
-    if ( phoneRegex.test(phone) == false){
-      alert('Please enter a valid phone number');
+    if (phoneRegex.test(phone) == false) {
+      alert("Please enter a valid phone number");
       return false;
     }
     return true;
-}
+  }
 
   // Validate email
   function checkMatchingEmails(email, confirmEmail) {
-      if (email !== confirmEmail) {
-          alert('Emails do not match. Please confirm your email.');
-          return false;
-      }
-      return true;
+    if (email !== confirmEmail) {
+      alert("Emails do not match. Please confirm your email.");
+      return false;
+    }
+    return true;
   }
 
+  if (
+    validateEmail(email) &&
+    validatePhoneNumber(phone) &&
+    checkMatchingEmails(email, confirmEmail)
+  ) {
+    // Display summary
+    const fullName = firstName + " " + lastName;
+    const summaryMessage = `To darussalammasjiddarlaston@gmail.com \nName: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nContact Preference: ${contactPreference}\nSubject: ${subject}\nMessage: ${message}`;
+    const confirmation = confirm(`${summaryMessage}\nPress OK to confirm.`);
+    // Show confirmation of email sent
+    if (confirmation) {
+      // Construct the mailto link
+      const mailtoLink = `mailto:darussalammasjiddarlaston@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(message + "\nFrom " + fullName)}`;
 
-  if (validateEmail(email) && validatePhoneNumber(phone) && checkMatchingEmails(email, confirmEmail)) {
-      // Display summary 
-      const fullName = firstName + " " + lastName;
-      const summaryMessage = `To darussalammasjiddarlaston@gmail.com \nName: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nContact Preference: ${contactPreference}\nSubject: ${subject}\nMessage: ${message}`;
-      const confirmation = confirm(`${summaryMessage}\nPress OK to confirm.`);
-      // Show confirmation of email sent
-      if (confirmation) {
-        // Construct the mailto link
-        const mailtoLink = `mailto:darussalammasjiddarlaston@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + "\nFrom " + fullName )}`;
-        
-        // Open the mail client with prefilled details
-        window.location.href = mailtoLink;
-      }
+      // Open the mail client with prefilled details
+      window.location.href = mailtoLink;
+    }
   }
 }
-

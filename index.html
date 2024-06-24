@@ -222,13 +222,27 @@
         <h1>Donate</h1>
         <div id="donate-container">
           <div class="donate-left">
-            <!-- DONATION OPTIONS HERE -->
-            <form>
-              <button class="donate-button" type="button">£5</button>
-              <button class="donate-button" type="button">£10</button>
-              <button class="donate-button" type="button">£20</button>
-              <button class="donate-button" type="button">£50</button>
-              <button class="donate-button custom-amount" type="button">
+            <form id="donate-form">
+              <!-- --------- TESTING PURPOSES ----------- -->
+              <button id="reset" type="button">reset</button>
+              <!-- -------------------------------------- -->
+              <button class="donate-button" type="button" value="500">
+                £5
+              </button>
+              <button class="donate-button" type="button" value="1000">
+                £10
+              </button>
+              <button class="donate-button" type="button" value="2000">
+                £20
+              </button>
+              <button class="donate-button" type="button" value="5000">
+                £50
+              </button>
+              <button
+                id="custom-amount"
+                class="donate-button custom-amount"
+                type="button"
+              >
                 Custom Amount
               </button>
               <input

@@ -10,9 +10,7 @@ const stripe = new Stripe(
   "sk_test_51PQ92SP1a2QzSSXyoMOE8iavByohaUo3ywLdRjGg5RnM2ueyseqkXXjXef58fIQaHXyAusWnDvFXD9o5SRQxiKAt00rpT3sC7Q"
 );
 
-app.get("/api/create-checkout-session", (req, res) =>
-  res.status(200).send("Hello World")
-);
+app.get("/api", (req, res) => res.status(200).send("Hello World"));
 
 app.post("/api/create-checkout-session", async (request, response) => {
   try {

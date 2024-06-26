@@ -20,7 +20,7 @@ body {
 
 @font-face {
   font-family: Islamic;
-  src: url(assets/AlFitrahRamadhan-zr89X.otf);
+  src: url(../assets/AlFitrahRamadhan-zr89X.otf);
 }
 
 h1 {
@@ -97,13 +97,13 @@ nav {
   padding: 10px 20px;
 }
 
-.navbar-right a.nav-mobile{
+.navbar-right a.nav-mobile {
   border-radius: 50%;
   background-color: deepskyblue;
   padding: 12px;
 }
 
-.navbar-right a.nav-mobile i{
+.navbar-right a.nav-mobile i {
   font-size: 32px;
   color: black;
 }
@@ -116,18 +116,18 @@ nav {
   background: var(--navbar-option-hover);
 }
 
-.hamburger{
+.hamburger {
   display: none;
   cursor: pointer;
 }
 
-.bar{
+.bar {
   display: block;
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  -webkit-transition:all 0.3s ease-in-out;
-  transition:all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .donate {
@@ -165,7 +165,6 @@ nav {
 .cta-content {
   width: 500px;
   top: 75px;
-  
 }
 
 .cta-content h2 {
@@ -207,7 +206,7 @@ a.donate2:hover {
 }
 
 #cta .cta-right {
-  background-image: url(assets/mosque2.jpg);
+  background-image: url(../assets/mosque2.jpg);
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -258,7 +257,6 @@ a.donate2:hover {
   position: relative;
   display: inline-block;
   font-family: Islamic;
-  
 }
 
 /* Styling for the heading */
@@ -325,7 +323,7 @@ a.donate2:hover {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-  margin: 30px 0
+  margin: 30px 0;
 }
 
 /* Styling for the tel and mail links */
@@ -827,7 +825,7 @@ i {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-#donate-form{
+#donate-form {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   gap: 20px;
@@ -1198,41 +1196,40 @@ footer.bottom {
   margin-left: auto;
 }
 
-@media screen and (max-width:1200px) {
-  .navbar-middle a{
-    padding: 10px 15px;;
+@media screen and (max-width: 1200px) {
+  .navbar-middle a {
+    padding: 10px 15px;
   }
 }
 
-@media(min-width:1100px){
-  .cta-content{
+@media (min-width: 1100px) {
+  .cta-content {
     transform: translateX(127px);
     z-index: 2000;
   }
 }
 
-@media(max-width:1100px) {
-  .cta-left{
+@media (max-width: 1100px) {
+  .cta-left {
     width: 100vw;
     justify-content: center;
   }
 
-  .cta-content{
+  .cta-content {
     text-align: center;
   }
 
-  .cta-right{
+  .cta-right {
     display: none;
   }
 
-  .facilities{
+  .facilities {
     grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
   }
 }
 
-@media screen and (max-width:956px) {
-
-  nav{
+@media screen and (max-width: 956px) {
+  nav {
     position: fixed;
     top: 0px;
     background-color: white;
@@ -1241,11 +1238,11 @@ footer.bottom {
     align-items: center;
   }
 
-  .Name{
+  .Name {
     font-size: 27px;
   }
 
-  .navbar-middle{
+  .navbar-middle {
     position: fixed;
     display: flex;
     top: 69px;
@@ -1259,100 +1256,100 @@ footer.bottom {
     width: 100vw;
   }
 
-  .navbar-middle a{
+  .navbar-middle a {
     text-align: center;
     font-size: 20px;
   }
 
-  .navbar-right{
+  .navbar-right {
     display: inline-flex;
   }
 
-  nav a{
-      margin: 16px 0;
+  nav a {
+    margin: 16px 0;
   }
 
-  nav.active .navbar-middle{
+  nav.active .navbar-middle {
     left: 0;
     display: flex;
     max-height: 380px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
   }
 
-  .hamburger{
+  .hamburger {
     display: block;
   }
 
-  .bar{
+  .bar {
     background-color: black;
   }
-  
-  .hamburger.active .bar:nth-child(2){
+
+  .hamburger.active .bar:nth-child(2) {
     opacity: 0;
-
   }
 
-  .hamburger.active .bar:nth-child(1){
+  .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-
   }
 
-  .hamburger.active .bar:nth-child(3){
+  .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  #prayer-times{
+  #prayer-times {
     padding: 120px 11.4% 70px;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width:956px){
-  footer.top{
+@media only screen and (min-width: 768px) and (max-width: 956px) {
+  footer.top {
     grid-template-rows: 1fr;
     grid-template-columns: unset;
     padding: 70px 11.4% 0;
   }
 
-  .logo-apps{
+  .logo-apps {
     grid-template-columns: 1fr 1fr;
     margin-left: 0;
     width: 100%;
     display: grid;
     max-height: 200px;
-    
   }
 
-  .apps{
+  .apps {
     margin-top: 0;
   }
 
-  .quick-links{
+  .quick-links {
     margin-top: 20px;
   }
 
-  .links,.details{
+  .links,
+  .details {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .masjid-information{
+  .masjid-information {
     margin-top: 40px;
     margin-bottom: 20px;
   }
-
 }
 
-@media screen and (min-width:800px){
-  .prayer-container,#contact-container,#donate-container{
+@media screen and (min-width: 800px) {
+  .prayer-container,
+  #contact-container,
+  #donate-container {
     display: grid;
   }
 }
 
-@media screen and (max-width:800px){
-  .prayer-right,.donate-right{
+@media screen and (max-width: 800px) {
+  .prayer-right,
+  .donate-right {
     margin-top: 20px;
   }
-  
+
   .contact-right {
     background-color: #00bfff1a;
     margin-top: 20px;
@@ -1361,7 +1358,7 @@ footer.bottom {
     flex-wrap: wrap;
   }
 
-  .contact-right p{
+  .contact-right p {
     overflow-wrap: break-word;
     color: black;
     text-decoration: none;
@@ -1374,7 +1371,8 @@ footer.bottom {
     padding: 10px;
   }
 
-  .prayer-left,.prayer-right {
+  .prayer-left,
+  .prayer-right {
     width: 67vw;
   }
 
@@ -1387,43 +1385,47 @@ footer.bottom {
     padding: 8px 16px;
   }
 
-  footer.top{
+  footer.top {
     grid-template-rows: 1fr;
     grid-template-columns: unset;
     padding: 70px 11.4% 0;
     text-align: center;
   }
 
-  .logo-apps{
+  .logo-apps {
     margin-left: 0;
     width: 100%;
   }
 
-  .apps{
+  .apps {
     margin-top: 0;
     justify-self: center;
   }
 
-  footer.top .quick-links ul li, footer.top .bank-details ul li {
+  footer.top .quick-links ul li,
+  footer.top .bank-details ul li {
     justify-content: center;
   }
 
-  footer.top .masjid-information ul li:nth-child(1),footer.top .masjid-information ul li:nth-child(2), footer.top .masjid-information ul li:nth-child(3), footer.top .masjid-information ul li:nth-child(4) {
+  footer.top .masjid-information ul li:nth-child(1),
+  footer.top .masjid-information ul li:nth-child(2),
+  footer.top .masjid-information ul li:nth-child(3),
+  footer.top .masjid-information ul li:nth-child(4) {
     display: grid;
   }
 
-  .quick-links{
+  .quick-links {
     margin-top: 20px;
   }
 
-  .masjid-information{
+  .masjid-information {
     margin-top: 40px;
     margin-bottom: 20px;
   }
 }
 
-@media screen and (min-width:500px){
-  .navbar-right .nav-mobile{
+@media screen and (min-width: 500px) {
+  .navbar-right .nav-mobile {
     display: none;
   }
 
@@ -1431,49 +1433,48 @@ footer.bottom {
     text-align: end;
   }
 
-  #donate{
+  #donate {
     padding-top: 20px;
   }
-  .logo{
-    display: inline-flex
+  .logo {
+    display: inline-flex;
   }
 }
 
-@media screen and (max-width:500px) {  
-
-  nav{
+@media screen and (max-width: 500px) {
+  nav {
     padding: 20px 5% 25px;
   }
 
-  .navbar-right a.donate{
+  .navbar-right a.donate {
     display: none;
   }
 
-  .navbar-left a{
+  .navbar-left a {
     font-size: 20px;
   }
 
-  #cta{
+  #cta {
     height: 50vh;
   }
 
-  .cta-content{
+  .cta-content {
     transform: scale(0.8);
   }
 
-  .intro-container{
+  .intro-container {
     grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   }
 
-  .intro-left{
+  .intro-left {
     width: 80vw;
   }
 
-  .facilities{
+  .facilities {
     grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
   }
 
-  .intro-right{
+  .intro-right {
     width: 80vw;
   }
 
@@ -1481,7 +1482,7 @@ footer.bottom {
     padding: 5px;
   }
 
-  .prayer-container{
+  .prayer-container {
     padding: 22px;
     width: 80vw;
   }
@@ -1501,21 +1502,19 @@ footer.bottom {
 
   .logo {
     display: contents;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
 
-  .logo img{
+  .logo img {
     justify-self: center;
   }
 
-  .apps{
+  .apps {
     display: grid;
   }
 
-  footer.bottom{
+  footer.bottom {
     display: grid;
     text-align: center;
   }
 }
-
-

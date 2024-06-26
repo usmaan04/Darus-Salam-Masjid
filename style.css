@@ -373,7 +373,7 @@ a.donate2:hover {
 }
 
 #prayer-times {
-  padding: 70px 11.4% 70px;
+  padding: 70px 11.4% 40px;
   text-align: center;
   z-index: -1;
   width: 100vw;
@@ -580,7 +580,7 @@ i {
 #about-us {
   width: 100%;
   font-size: 18px;
-  padding: 10px 11.4% 0;
+  padding: 40px 11.4% 0;
   color: #ffffff;
   font-family: Arial;
   position: relative;
@@ -824,9 +824,15 @@ i {
   padding: 20px;
   text-align: center;
   border-radius: 25px;
-  height: fit-content;
-  align-content: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#donate-form{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 5px;
 }
 
 .donate-input,
@@ -852,6 +858,7 @@ i {
   border: 1px solid black;
   padding: 10px;
   border-radius: 5px;
+  margin-top: 40px;
 }
 
 .donate-submit:disabled {
@@ -1409,6 +1416,10 @@ footer.bottom {
 
   #footer .footer-right {
     text-align: end;
+  }
+
+  #donate{
+    padding-top: 20px;
   }
 }
 

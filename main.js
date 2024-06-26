@@ -28,7 +28,7 @@ function setupNavbarLinkActivation() {
   const sections = document.querySelectorAll("section");
 
   function activateLink() {
-    const buffer = 80;
+    const buffer = 60;
     let index = sections.length;
 
     while (--index && window.scrollY + buffer < sections[index].offsetTop) {}

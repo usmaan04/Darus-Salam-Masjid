@@ -198,7 +198,8 @@ function setupDonationForm() {
     }
     try {
       const response = await axios.post(
-        "http://localhost:3000/create-checkout-session",
+        // "http://localhost:3000/create-checkout-session",
+        "https://darus-salam-masjid.co.uk/api/create-checkout-session",
         { amount: selectedAmount }
       );
       const { url } = response.data;

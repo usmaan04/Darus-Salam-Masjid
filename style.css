@@ -1060,7 +1060,6 @@ footer.top {
 }
 
 .logo {
-  display: inline-flex;
   width: 100%;
   align-items: center;
 }
@@ -1145,7 +1144,11 @@ footer.top .bank-details ul {
 }
 
 footer.top .quick-links ul li,
-footer.top .bank-details ul li,
+footer.top .bank-details ul li {
+  margin-top: 22px;
+  display: flex;
+}
+
 footer.top .masjid-information ul li:nth-child(1) {
   margin-top: 22px;
   display: flex;
@@ -1388,6 +1391,7 @@ footer.bottom {
     grid-template-rows: 1fr;
     grid-template-columns: unset;
     padding: 70px 11.4% 0;
+    text-align: center;
   }
 
   .logo-apps{
@@ -1397,6 +1401,15 @@ footer.bottom {
 
   .apps{
     margin-top: 0;
+    justify-self: center;
+  }
+
+  footer.top .quick-links ul li, footer.top .bank-details ul li {
+    justify-content: center;
+  }
+
+  footer.top .masjid-information ul li:nth-child(1),footer.top .masjid-information ul li:nth-child(2), footer.top .masjid-information ul li:nth-child(3), footer.top .masjid-information ul li:nth-child(4) {
+    display: grid;
   }
 
   .quick-links{
@@ -1420,6 +1433,9 @@ footer.bottom {
 
   #donate{
     padding-top: 20px;
+  }
+  .logo{
+    display: inline-flex
   }
 }
 
@@ -1483,8 +1499,22 @@ footer.bottom {
     font-size: 14px;
   }
 
+  .logo {
+    display: contents;
+    margin-bottom: 20px; 
+  }
+
+  .logo img{
+    justify-self: center;
+  }
+
+  .apps{
+    display: grid;
+  }
+
   footer.bottom{
     display: grid;
+    text-align: center;
   }
 }
 

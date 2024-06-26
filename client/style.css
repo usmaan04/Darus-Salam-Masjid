@@ -20,7 +20,7 @@ body {
 
 @font-face {
   font-family: Islamic;
-  src: url(../assets/AlFitrahRamadhan-zr89X.otf);
+  src: url(assets/AlFitrahRamadhan-zr89X.otf);
 }
 
 h1 {
@@ -206,7 +206,7 @@ a.donate2:hover {
 }
 
 #cta .cta-right {
-  background-image: url(../assets/mosque2.jpg);
+  background-image: url(assets/mosque2.jpg);
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -1185,15 +1185,15 @@ footer.bottom {
   color: black;
 }
 
-#footer .footer-left p,
-#footer .footer-right p {
+#footer .footer {
   color: black;
   font-size: 17px;
   font-weight: bold;
 }
 
-#footer .footer-right {
+#footer .footer {
   margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 1200px) {

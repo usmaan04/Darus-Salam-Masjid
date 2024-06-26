@@ -10,7 +10,7 @@ const stripe = new Stripe(
   "sk_test_51PQ92SP1a2QzSSXyoMOE8iavByohaUo3ywLdRjGg5RnM2ueyseqkXXjXef58fIQaHXyAusWnDvFXD9o5SRQxiKAt00rpT3sC7Q"
 );
 
-app.post("/api/create-checkout-session/", async (request, response) => {
+app.post("/api/create-checkout-session", async (request, response) => {
   try {
     const { amount } = request.body;
     if (!amount || isNaN(amount)) {

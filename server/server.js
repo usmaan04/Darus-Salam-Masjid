@@ -13,13 +13,14 @@ const stripe = new Stripe(
 app.post("/api/create-checkout-session", async (request, response) => {
   try {
     const { amount } = request.body;
+    console.log(amount);
     if (!amount || isNaN(amount)) {
       console.log("Invalid amount: ", amount);
       return response.status(400).send(`Invalid amount: ${amount}`);
     }
     const session = await stripe.checkout.sessions.create({
-      success_url: "http://localhost:5500/index.html",
-      cancel_url: "http://localhost:5500/index.html",
+      success_url: "https://darus-salam-masjid-pbgcx.ondigitalocean.app",
+      cancel_url: "https://darus-salam-masjid-pbgcx.ondigitalocean.app",
       mode: "payment",
       line_items: [
         {

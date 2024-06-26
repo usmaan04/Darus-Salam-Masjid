@@ -859,6 +859,14 @@ i {
   margin-top: 40px;
 }
 
+.donate-submit:hover {
+  transform: scale(1.05);
+}
+
+.donate-submit:active {
+  transform: scale(0.95);
+}
+
 .donate-submit:disabled {
   cursor: not-allowed;
   color: black;

@@ -197,10 +197,12 @@ function setupDonationForm() {
       );
     }
     try {
+      console.log("SENDING REQUEST");
       const response = await axios.post(
         "https://darus-salam-masjid-pbgcx.ondigitalocean.app/api/create-checkout-session",
         { amount: selectedAmount }
       );
+      console.log(response.data);
       const { url } = response.data;
       if (url) window.location.href = url;
     } catch (e) {

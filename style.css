@@ -726,6 +726,10 @@ i {
   position: relative;
 }
 
+.timeline ul li img{
+  width: 70%;
+}
+
 .timeline ul li h2 {
   color: var(--font-color);
   font-size: 1.7rem;

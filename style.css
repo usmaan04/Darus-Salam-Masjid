@@ -58,7 +58,7 @@ nav img {
 /* Styling for the main header */
 nav {
   background: white;
-  padding: 20px 5%;
+  padding: 20px 6.7%;
   display: flex;
   position: fixed;
   justify-content: space-between;
@@ -66,16 +66,25 @@ nav {
   height: 70px;
   z-index: 2001;
   color: gray;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  align-items: center;
 }
 
-.navbar-left {
-  font-family: Islamic;
+.navbar-left{
+  align-items: center;
+  display: grid;
+}
+
+.navbar-left img{
+  width: 35px;
+  height: 35px;
+  border-radius: 40px;
+  align-self: center;
+  margin-right: 10px;
 }
 
 /* Styling for the name in the main header */
 .Name {
-  font-size: 27px;
+  font-size: 15px;
   color: black;
   text-decoration: none;
   font-weight: 600;
@@ -87,14 +96,24 @@ nav {
 }
 
 /* Styling for navigation bar links */
-.navbar-middle a,
-.navbar-right a.donate {
-  font-size: 12px;
+.navbar-middle a{
   color: black;
+  font-size: 12px;
   text-decoration: none;
   font-weight: 100;
   position: relative;
-  padding: 10px 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.navbar-right a.donate {
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  position: relative;
+  padding: 5px 16px;
+  border-radius: 5px;
 }
 
 .navbar-right a.nav-mobile {
@@ -108,12 +127,13 @@ nav {
   color: black;
 }
 
-.navbar-middle a:hover {
-  background: var(--navbar-option-hover);
+.navbar-middle a:hover{
+  color: deepskyblue;
 }
 
-.navbar-middle a.option-selected {
-  background: var(--navbar-option-hover);
+  .navbar-middle a.option-selected {
+  border-radius: 20px;
+  border: 2px solid deepskyblue;
 }
 
 .hamburger {
@@ -146,38 +166,56 @@ nav {
 }
 
 #cta {
-  position: relative;
-  top: 80px;
-  display: grid;
-  grid-template-columns: 2fr 2.5fr;
-  z-index: 1200;
-  height: 450px;
   width: 100vw;
+  height: 42vw;
+  top: 70px;
+  display: flex;
+  position: relative;
 }
 
-#cta .cta-left {
-  display: flex;
-  background-color: black;
-  align-items: center;
+.cta-left{
+  width: 40%;
+  align-content: center;
   overflow-x: visible;
+  display: grid;
+}
+
+.cta-left img{
+  position: absolute;
+  width: 30%;
+  display: flex;
+  align-self: flex-end;
+  justify-self: flex-start;
 }
 
 .cta-content {
-  width: 500px;
-  top: 75px;
+  width: 566px;
+  position: relative;
 }
 
 .cta-content h2 {
-  color: white;
+  color: black;
   font-family: Islamic;
+  z-index: 1999;
+  position: relative;
+  background-color: #00bfff1a;
+  padding: 15px;
+  border-radius: 10px;
+  width: fit-content;
 }
 
+.cta-content i{
+  margin-right: 5px;
+  transform: translateY(5px);
+}
+
+.cta-content i,
 .cta-content span {
   color: deepskyblue;
 }
 
 #cta .cta-left .cta-content h1 {
-  color: white;
+  color: #2c3c4d;
   font-size: 50px;
   margin-top: 20px;
   margin-bottom: 50px;
@@ -185,43 +223,45 @@ nav {
   position: relative;
 }
 
-a.donate2 {
-  background: transparent;
-  border: 3px solid;
-  border-color: white;
-  padding: 10px 40px 10px 40px;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  font-size: 10px;
-  text-transform: uppercase;
-  z-index: 1999;
-  position: relative;
-  cursor: pointer;
-}
-
-a.donate2:hover {
-  background: white;
-  color: black;
-}
-
-#cta .cta-right {
-  background-image: url(assets/mosque2.jpg);
+.cta-right{
+  width: 60%;
   height: 100%;
-  width: 100%;
-  background-size: cover;
 }
 
-.cta-right:before {
+#cta::after{
   margin-left: auto;
   content: "";
   position: absolute;
   top: 0px;
   right: 0;
   bottom: 66px;
-  left: 44%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.92) 10%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255,0.2));
   z-index: 1500;
+  height: 100%;
+}
+
+.donate2{
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px 45px;
+  border-radius: 5px;
+  background: deepskyblue;
+  border: 5px solid;
+  border-color: deepskyblue;
+  z-index: 1999;
+  text-decoration: none;
+}
+
+.donate2:hover{
+  background: var(--navbar-option-hover);
+  border-color: var(--navbar-option-hover);
+}
+
+#cta .cta-right img{
+  width: 100%;
   height: 100%;
 }
 
@@ -229,7 +269,7 @@ a.donate2:hover {
 #intro {
   width: 100vw;
   font-size: 20px;
-  padding: 70px 11.4% 0;
+  padding: 70px 6.8% 0;
   font-family: Arial;
   position: relative;
   align-content: center;
@@ -237,7 +277,7 @@ a.donate2:hover {
 
 /* Styling for the intro container layout */
 #intro .intro-container {
-  display: inline-grid;
+  display: grid;
   justify-content: space-between;
   align-items: start;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -251,19 +291,22 @@ a.donate2:hover {
 }
 /* Styling for the heading */
 #intro .intro-left h3 {
+  font-size: larger;
   color: deepskyblue;
-  padding-bottom: 10px;
-  font-size: 20px;
-  position: relative;
-  display: inline-block;
   font-family: Islamic;
+  position: relative;
+  background-color: #00bfff1a;
+  padding: 15px;
+  border-radius: 10px;
+  width: fit-content;
+  margin-bottom: 30px;
 }
 
 /* Styling for the heading */
 #intro .intro-left h1 {
-  color: black;
+  color: #2c3c4d;
   padding-bottom: 10px;
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 20px;
   position: relative;
 }
@@ -274,16 +317,17 @@ a.donate2:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 27%;
   height: 4px;
   background-color: deepskyblue;
 }
 
 /* Styling for the interests paragraph  */
-#intro .intro-left p.interests {
-  color: black;
+#intro .intro-left p.description {
+  color: #8e97a1;
+  letter-spacing: 1px;
   font-size: 17px;
-  margin-top: 10px;
+  margin: 30px 0;
 }
 
 /* Styling for the right column */
@@ -291,38 +335,19 @@ a.donate2:hover {
   flex-basis: 45%;
   text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  height: 100%;
 }
 
 /* Styling for the image */
 #intro .intro-right img {
   max-width: 100%;
   max-height: 100%;
-  width: auto;
-  height: 400px;
+  width: 80%;
   border-radius: 15px;
 }
 
-#intro .intro-right .carousel {
-  position: relative;
-}
-
-.carousel img {
-  display: none;
-}
-
-#intro .carousel img.active {
-  width: 100%;
-  display: block;
-  transition: 0.5s fade;
-}
-
 .facilities {
-  list-style: none;
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   margin: 30px 0;
 }
 
@@ -337,7 +362,12 @@ a.donate2:hover {
 }
 
 .facilities li {
-  padding-bottom: 10px;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 7px 5px 9px 3px #e7f9ff;
+  align-content: center;
+  display: inline-block;
 }
 
 /* Styling for the tel and mail links */
@@ -353,17 +383,23 @@ a.donate2:hover {
   border: 5px solid;
   border-color: deepskyblue;
   padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  color: black;
+  color: white;
   text-transform: uppercase;
-  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  border-radius: 5px;
+  letter-spacing: 1px;
   cursor: pointer;
 }
 
 .learn-more:hover {
   background: var(--navbar-option-hover);
   border-color: var(--navbar-option-hover);
-  color: black;
+}
+
+.learn-more i{
+  transform: translateY(5px);
+  font-size: 25px;
 }
 
 .mobile {
@@ -371,100 +407,109 @@ a.donate2:hover {
 }
 
 #prayer-times {
-  padding: 70px 11.4% 40px;
+  padding: 100px 6.8% 0px;
   text-align: center;
   z-index: -1;
   width: 100vw;
 }
 
 #prayer-times h1 {
-  color: black;
+  color: #2c3c4d;
   padding-bottom: 10px;
   font-size: 30px;
   margin-bottom: 20px;
-  position: absolute;
-  z-index: -1;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 /* Styling for the heading underline effect */
 #prayer-times h1::after {
-  content: "";
+  content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: -10px;
+  width: 10%;
   height: 4px;
   background-color: deepskyblue;
 }
 
 .prayer-container {
   width: 100%;
-  background-color: rgb(0, 191, 255, 0.1);
   justify-content: space-between;
   position: static;
   height: fit-content;
-  grid-template-columns: 1.5fr 2fr;
   border-radius: 30px;
-  padding: 30px;
-  margin-top: 80px;
+  padding: 60px;
+  margin-top: 10px;
   gap: 50px;
 }
 
-.prayer-container .prayer-right {
-  padding: 20px;
+.prayer-left{
+  padding: 10px;
+}
+
+.prayer-left iframe{
+  border-radius: 5px;
+}
+
+.prayer-left,
+.prayer-right{
+  width: 50%;
   background: #ffffff;
+  border: 1px solid #c8f1ff;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 10px #e7f9ff;
 }
 
-.prayer-container .prayer-right h2 {
-  color: #333;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border-bottom: 2px solid deepskyblue;
-  display: inline-block;
-  padding-bottom: 5px;
+.jumuah-times{
+  height: 60%;
+  width: 100%;
+  border-bottom: 1px solid #c8f1ff;
+  padding: 20px;
 }
 
-.prayer-container .prayer-right .jumuah-times h4 {
+.prayer-right .jumuah-times h4 {
   font-size: 25px;
-  color: #555;
+  color: #2c3c4d;
   margin: 0;
-  font-family: Islamic;
 }
 
-.prayer-container .prayer-right .jumuah-times .prayer-time-item {
-  margin-bottom: 20px;
-}
-
-.prayer-container .prayer-right .jumuah-times p.times {
-  font-size: 22px;
+.prayer-right .jumuah-times p.times {
+  font-size: 25px;
   color: deepskyblue;
   margin-top: 12px;
 }
 
 .download-container {
+  padding: 20px;
   display: flex;
   position: relative;
+  height: 40%;
+  gap: 10%;
 }
 
 .download-section {
-  margin-top: 25px;
   text-align: center;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #c8f1ff;
+  align-content: center;
 }
 
 .download-section p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 10px;
+  padding:  0 13px;
+  font-size: 15px;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
 }
 
 .button {
   --main-focus: #2d8cf0;
   --font-color: black;
-  --bg-color-sub: deepskyblue;
-  --bg-color: deepskyblue;
+  --bg-color-sub: #00bfff1a;
+  --bg-color: #00bfff1a;
   --main-color: black;
   position: relative;
   width: 150px;
@@ -472,8 +517,6 @@ a.donate2:hover {
   cursor: pointer;
   display: flex;
   align-items: center;
-  border: 2px solid var(--main-color);
-  box-shadow: 4px 4px var(--main-color);
   background-color: var(--bg-color);
   border-radius: 10px;
   overflow: hidden;
@@ -501,8 +544,8 @@ a.donate2:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: deepskyblue;
-  color: #fff;
+  background: #00bfff1a;
+  color: deepskyblue;
   padding: 10px 20px;
   align-items: center;
   border-radius: 50px;
@@ -536,30 +579,43 @@ i {
 }
 
 .button:hover i {
-  transform: rotate(45deg);
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
 }
 
 .svgIcon {
-  fill: white;
-  transform: translateY(-5px);
+  fill: deepskyblue;
 }
 
 .icon2 {
   width: 18px;
   height: 5px;
-  border-bottom: 2px solid white;
-  border-left: 2px solid white;
-  border-right: 2px solid white;
+  border-bottom: 4px solid deepskyblue;
 }
 
 .button:hover .icon2 {
-  border-bottom: 2px solid white;
-  border-left: 2px solid white;
-  border-right: 2px solid white;
+  border-bottom: 4px solid deepskyblue;
 }
 
 .button:hover .svgIcon {
-  fill: rgb(255, 255, 255);
+  fill: deepskyblue;
   animation: slide-in-top 1s linear infinite;
 }
 
@@ -578,7 +634,7 @@ i {
 #about-us {
   width: 100%;
   font-size: 18px;
-  padding: 40px 11.4% 0;
+  padding: 40px 6.8% 0;
   color: #ffffff;
   font-family: Arial;
   position: relative;
@@ -586,7 +642,7 @@ i {
 }
 
 #about-us h1 {
-  color: black;
+  color: #2c3c4d;
   padding-bottom: 10px;
   font-size: 30px;
   margin-bottom: 20px;
@@ -611,7 +667,7 @@ i {
 
 .timeline {
   --accent: deepskyblue;
-  --text: black;
+  --text: #2c3c4d;
   --line: #c4c4c4;
   background: var(--background);
   color: var(--text);
@@ -721,7 +777,7 @@ i {
 .timeline ul li h3 {
   color: var(--accent);
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   font-size: 1.6em;
   position: relative;
 }
@@ -737,10 +793,13 @@ i {
 }
 
 .timeline ul li p {
-  margin-bottom: 10px;
-  padding-top: 10px;
+  margin-bottom: 15px;
+  padding-top: 15px;
   position: relative;
   text-wrap: pretty;
+  color: #8e97a1;
+  letter-spacing: 1px;
+  font-size: 17px;
 }
 
 @media (max-width: 568px) {
@@ -782,52 +841,51 @@ i {
 
 /* Styling for the donate section */
 #donate {
-  font-family: Tahoma;
-  width: 100vw;
-  padding-left: 11.4%;
-  padding-right: 11.4%;
+  padding: 50px 6.8%;
+  background-color: rgb(0, 191, 255, 0.1);
 }
 
 #donate h1 {
-  color: black;
+  color: #2c3c4d;
   padding-bottom: 10px;
   font-size: 30px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   position: relative;
-  z-index: -1;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
 }
 
 /* Styling for the heading underline effect */
 #donate h1::after {
-  content: "";
+  content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: -10px;
+  width: 10%;
   height: 4px;
   background-color: deepskyblue;
 }
 
 #donate-container {
   width: 100%;
-  background-color: rgb(0, 191, 255, 0.1);
-  justify-content: space-between;
+  height: 100%;
   position: static;
-  height: fit-content;
   grid-template-columns: 1fr 1fr;
   border-radius: 30px;
-  padding: 20px;
+  padding: 30px;
   column-gap: 24px;
+  align-items: center;
+}
+.donate-left,
+.donate-right{
+  width: 100%;
 }
 
 .donate-right {
-  background-color: white;
   padding: 10px;
   text-align: center;
   border-radius: 25px;
   align-content: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: grid;
 }
 
 .donate-right p:nth-child(1) {
@@ -842,20 +900,29 @@ i {
   font-weight: 700;
 }
 
+.donate-right img{
+  height: 20%;
+  display: flex;
+  justify-self: flex-end;
+  align-self: flex-end;
+  z-index: -1;
+  position: absolute;
+}
+
 /* Styling for the contact-us section */
 #contact-us {
   font-family: Tahoma;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  padding: 70px 11.4% 0;
+  padding: 70px 6.7% 0;
   margin-top: 20px;
 }
 
 /* Styling for contact-us heading */
 #contact-us h2.header {
   position: relative;
-  color: black;
+  color: #2c3c4d;
   margin-top: 10px;
   font-weight: 600;
   padding-bottom: 10px;
@@ -877,7 +944,7 @@ i {
 }
 
 #contact-container {
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 /* Styling for the contact me form  */
@@ -918,27 +985,37 @@ i {
 #contactForm textarea,
 #contactForm select {
   width: 100%;
-  padding: 10px;
+  padding: 15px 25px;
   margin-top: 8px;
   margin-bottom: 20px;
-  border: 1px solid #3f3f3f;
-  border-radius: 5px;
-  background-color: #00bfff1a;
+  border: 1px solid lightblue;
+  border-radius: 10px;
+  background-color: transparent;
   color: black;
   font-family: Arial;
 }
 
 /* Styling for the submit button */
 #contactForm button {
-  padding: 12px 28px;
+  font-size: 12px;
+  color: white;
+  padding: 10px 35px;
+  border-radius: 5px;
   background: deepskyblue;
-  border-radius: 40px;
-  font-size: 16px;
-  color: black;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  display: inline-flex;
+  width: fit-content;
+  text-transform: uppercase;
+  border: none;
+}
+
+#contactForm button:hover{
+  scale: 0.9;
+}
+
+#contactForm button i{
+  margin-left: 5px;
+  font-size: 15px;
+  transform: translateY(-1px);
 }
 
 /* Submit button Hover  */
@@ -948,17 +1025,45 @@ i {
 
 .contact-right {
   background-color: #00bfff1a;
-  padding: 20px;
+  padding: 20px 0 0 20px;
   text-align: left;
   margin-left: 50px;
   border-radius: 20px;
-  height: 100%;
+  display: grid;
+  overflow-y: clip;
 }
 
 .contact-right h2 {
-  color: black;
-  text-align: center;
-  margin-bottom: 20px;
+  color: #2c3c4d;
+  margin-bottom: 30px;
+}
+
+.contact-right i{
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.contact-right h4{
+  display: inline-flex;
+  padding-right: 20px;
+  z-index: 1;
+}
+
+.contact-right p{
+  padding-right: 20px;
+  z-index: 1;
+  margin-bottom: 42px;
+  height: fit-content;
+}
+
+.contact-right img{
+  height: 610%;
+  display: flex;
+  justify-self: flex-end;
+  align-self: flex-end;
+  z-index: -1;
+  opacity: 0.1;
+  transform: translate3d(30px, 30px, 10px);
 }
 
 #footer {
@@ -980,94 +1085,55 @@ footer.top {
   background-color: #00bfff1a;
   height: fit-content;
   width: 100%;
-  padding: 60px 0% 60px;
+  padding: 60px 6.8% 30px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   align-items: flex-start;
 }
 
 .logo-apps {
-  margin-left: 27.4%;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  width: 64%;
+  height: 100%;
 }
 
 .logo {
+  height: 100%;
   width: 100%;
   align-items: center;
+  justify-content: left;
 }
 
 .logo img {
-  max-width: 125px;
+  max-width: 75px;
   border-radius: 50%;
-  max-height: 200px;
 }
 
 .logo p {
   font-size: 25px;
-  align-self: baseline;
-  margin: auto;
+  margin-left: 20px;
+  margin-bottom: 0;
   font-family: Islamic;
-  width: 30%;
 }
 
 .apps {
-  display: inline-grid;
-  width: 60%;
-  margin-top: 26px;
+  height: 100%;
+  width: 100%;
+  display: grid;
 }
 
-h3.prompt {
-  margin-bottom: 14px;
-  font-size: 17px;
-}
-
-.playstore-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9999px;
-  background-color: deepskyblue;
-  padding: 0.625rem 1.5rem;
-  text-align: center;
-  color: black;
-  outline: 0;
-  transition: all 0.2s ease;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-
-.playstore-button:hover {
-  background-color: black;
-  color: white;
-}
-
-.icon {
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.texts {
-  margin-left: 1rem;
+.store-links{
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1;
 }
 
-.text-1 {
-  margin-bottom: 0.25rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
+.apps img{
+  margin-top: 5px;
+  width: 70%;
 }
 
-.text-2 {
-  font-weight: 600;
-}
-
-footer.top .bank-details {
-  margin-top: 45px;
+footer.top h3{
+  color: #2c3c4d;
 }
 
 footer.top .quick-links ul,
@@ -1083,6 +1149,10 @@ footer.top .bank-details ul li {
   display: flex;
 }
 
+footer.top .bank-details ul li span {
+  color: #8e97a1;
+}
+
 footer.top .masjid-information ul li:nth-child(1) {
   margin-top: 22px;
   display: flex;
@@ -1090,7 +1160,7 @@ footer.top .masjid-information ul li:nth-child(1) {
 
 footer.top .quick-links ul li a {
   text-decoration: none;
-  color: black;
+  color: #8e97a1;
 }
 
 footer.top .masjid-information ul li:nth-child(2),
@@ -1108,21 +1178,24 @@ footer.top .masjid-information li i {
 }
 
 footer.top .masjid-information li a {
-  color: black;
+  color: #8e97a1;
   text-decoration: none;
   font-size: 13px;
   margin-bottom: 20px;
   transform: translateY(-2px);
 }
 
+footer.top .information li p {
+  color: #8e97a1;
+}
+
 footer.bottom {
   padding: 20px 11.4% 0px;
   background: deepskyblue;
-  color: black;
+  color: white;
 }
 
 #footer .footer {
-  color: black;
   font-size: 17px;
   font-weight: bold;
 }
@@ -1139,10 +1212,13 @@ footer.bottom {
 }
 
 @media (min-width: 1100px) {
-  .cta-content {
-    transform: translateX(127px);
-    z-index: 2000;
+  .navbar-left{
+    grid-template-columns: 1fr 3fr;
   }
+
+  .cta-content {
+    padding-left: 16.8%;
+}
 }
 
 @media (max-width: 1100px) {
@@ -1155,8 +1231,14 @@ footer.bottom {
     text-align: center;
   }
 
+  .navbar-left img,
+  .cta-left img,
   .cta-right {
     display: none;
+  }
+
+  .cta-content h2 {
+    display: inline;
   }
 
   .facilities {
@@ -1174,8 +1256,8 @@ footer.bottom {
     align-items: center;
   }
 
-  .Name {
-    font-size: 27px;
+  .navbar-left img{
+    display: none;
   }
 
   .navbar-middle {
@@ -1233,7 +1315,17 @@ footer.bottom {
   }
 
   #prayer-times {
-    padding: 120px 11.4% 70px;
+    padding: 160px 6.8% 70px;
+  }
+  
+  .bank-details{
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 956px){
+  .logo{
+    justify-content: center;
   }
 }
 
@@ -1245,7 +1337,7 @@ footer.bottom {
   }
 
   .logo-apps {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     margin-left: 0;
     width: 100%;
     display: grid;
@@ -1272,15 +1364,42 @@ footer.bottom {
   }
 }
 
+@media screen and (min-width: 900px) {
+  .intro-right{
+    justify-content: flex-end;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .intro-right{
+    justify-content: center;
+  }
+
+}
+
 @media screen and (min-width: 800px) {
   .prayer-container,
   #contact-container,
   #donate-container {
-    display: grid;
+    display: flex;
   }
 }
 
 @media screen and (max-width: 800px) {
+
+  .prayer-container {
+    padding: 22px;
+    justify-items: center;
+    justify-content: center;
+    display: grid;
+  }
+
+  .prayer-left,
+  .prayer-right{
+    width: 100%;
+  }
+
   .prayer-right,
   .donate-right {
     margin-top: 20px;
@@ -1303,13 +1422,13 @@ footer.bottom {
 
 /* Media queries for mobile responsiveness */
 @media only screen and (max-width: 768px) {
-  .mobile {
-    padding: 10px;
+
+  .cta-content {
+    width: 98vw;
   }
 
-  .prayer-left,
-  .prayer-right {
-    width: 67vw;
+  .mobile {
+    padding: 10px;
   }
 
   .download-section {
@@ -1324,7 +1443,6 @@ footer.bottom {
   footer.top {
     grid-template-rows: 1fr;
     grid-template-columns: unset;
-    padding: 70px 11.4% 0;
     text-align: center;
   }
 
@@ -1371,9 +1489,11 @@ footer.bottom {
 
   #donate {
     padding-top: 20px;
+    margin-top: 20px;
   }
   .logo {
     display: inline-flex;
+    margin-bottom: 30px;
   }
 }
 
@@ -1394,8 +1514,8 @@ footer.bottom {
     height: 50vh;
   }
 
-  .cta-content {
-    transform: scale(0.8);
+  #cta::after{
+    background: none;
   }
 
   .intro-container {
@@ -1410,17 +1530,14 @@ footer.bottom {
     grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
   }
 
-  .intro-right {
-    width: 80vw;
-  }
-
   .mobile {
     padding: 5px;
   }
 
   .prayer-container {
     padding: 22px;
-    width: 80vw;
+    justify-content: center;
+    display: grid;
   }
 
   .prayer-container .prayer-right {
@@ -1447,6 +1564,16 @@ footer.bottom {
 
   .apps {
     display: grid;
+    margin: 20px
+  }
+
+  .logo p{
+    margin-left: 0;
+    align-content: center;
+  }
+
+  .apps img{
+    width: 90%;
   }
 
   footer.bottom {

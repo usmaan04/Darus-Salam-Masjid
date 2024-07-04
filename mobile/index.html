@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Darus Salam Masjid</title>
-    <link rel="icon" type="image/png" href="assets/logo.PNG" />
+    <link rel="icon" type="image/png" href="/assets/logo.PNG" />
     <link rel="stylesheet" type="text/css" href="/style.css" />
     <script src="main.js"></script>
     <link
@@ -31,17 +31,25 @@
 
       /* Base styles */
       .mobile {
-        padding: 20px;
+        padding: 10px;
+      }
+
+      .prayer-left, .prayer-right {
+        width: 100%;
       }
 
       .prayer-right {
-        text-align: center;
-        padding: 20px;
         background: #ffffff;
+        border: 1px solid #c8f1ff;
         border-radius: 15px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        margin-top: 5px;
+        box-shadow: 0px 0px 20px 10px #e7f9ff;
+      }
+
+      .jumuah-times{
+        height: 60%;
         width: 100%;
+        border-bottom: 1px solid #c8f1ff;
+        padding: 20px;
       }
 
       .prayer-right h2 {
@@ -57,45 +65,50 @@
 
       .prayer-right .jumuah-times h4 {
         font-size: 25px;
-        color: #555;
+        color: #2c3c4d;
         margin: 0;
-        font-family: Islamic;
-      }
-
-      .prayer-right .jumuah-times .prayer-time-item {
-        margin-bottom: 20px;
       }
 
       .prayer-right .jumuah-times p.times {
-        font-size: 22px;
+        font-size: 25px;
         color: deepskyblue;
         margin-top: 12px;
         margin-bottom: 12px;
       }
 
       .download-container {
+        padding: 20px;
         display: flex;
         position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        height: 40%;
+        gap: 10%;
+        justify-content: center;
       }
 
       .download-section {
         margin-top: 25px;
         text-align: center;
+        border-radius: 15px;
+        text-align: center;
+        border: 1px solid #c8f1ff;
+        align-content: center;
+        padding: 10px;
       }
 
       .download-section p {
-        font-size: 16px;
-        color: #666;
-        margin-bottom: 10px;
+        padding:  0 13px;
+        font-size: 15px;
+        color: black;
+        margin-top: 20px;
+        margin-bottom: 0;
+        overflow-wrap: break-word;
       }
 
       .button {
         --main-focus: #2d8cf0;
         --font-color: black;
-        --bg-color-sub: deepskyblue;
-        --bg-color: deepskyblue;
+        --bg-color-sub: #00bfff1a;
+        --bg-color: #00bfff1a;
         --main-color: black;
         position: relative;
         width: 150px;
@@ -103,14 +116,11 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-        border: 2px solid var(--main-color);
-        box-shadow: 4px 4px var(--main-color);
         background-color: var(--bg-color);
         border-radius: 10px;
         overflow: hidden;
         text-decoration: none;
       }
-
       .button,
       .button__icon,
       .button__text {
@@ -132,8 +142,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background: deepskyblue;
-        color: #fff;
+        background: #00bfff1a;
+        color: deepskyblue;
         padding: 10px 20px;
         align-items: center;
         border-radius: 50px;
@@ -167,30 +177,43 @@
       }
 
       .button:hover i {
-        transform: scale(1.25);
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        perspective: 1000px;
+      }
+
+      @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+        
+        30%, 50%, 70% {
+          transform: translate3d(-2px, 0, 0);
+        }
+        40%, 60% {
+          transform: translate3d(2px, 0, 0);
+        }
       }
 
       .svgIcon {
-        fill: white;
-        transform: translateY(-5px);
+        fill: deepskyblue;
       }
 
       .icon2 {
         width: 18px;
         height: 5px;
-        border-bottom: 2px solid white;
-        border-left: 2px solid white;
-        border-right: 2px solid white;
+        border-bottom: 4px solid deepskyblue;
       }
 
       .button:hover .icon2 {
-        border-bottom: 2px solid white;
-        border-left: 2px solid white;
-        border-right: 2px solid white;
+        border-bottom: 4px solid deepskyblue;
       }
 
       .button:hover .svgIcon {
-        fill: rgb(255, 255, 255);
+        fill: deepskyblue;
         animation: slide-in-top 1s linear infinite;
       }
 
@@ -283,7 +306,6 @@
         >Prayer times Darus Salam Masjid</a
       >
       <div class="prayer-right">
-        <h2>Prayer Information</h2>
         <div class="jumuah-times">
           <h4>Salatul Jumuah Bayan</h4>
           <p class="times">13:00</p>
@@ -292,31 +314,31 @@
         </div>
         <div class="download-container">
           <div class="download-section">
-            <p>Return to website here</p>
-            <a type="button" class="button" href="index.html">
-              <i class="bx bx-laptop"></i>
+            <a type="button" class="button" href="/mobile/">
+              <i class="bx bxs-mobile"></i>
             </a>
+            <p>View the mobile-friendly version here</p>
           </div>
           <div class="download-section">
-            <p>Download this month's timetable here</p>
             <a
               type="button"
               class="button"
               href="assets/bg.jpg"
               download="June"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 384 512"
-                class="svgIcon"
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              style="fill: deepskyblue;"
+              class="svgIcon"
               >
-                <path
-                  d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-                ></path>
-              </svg>
+              <path d="M20.901 10.566A1.001 1.001 0 0 0 20 10h-4V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v7H4a1.001 1.001 0 0 0-.781 1.625l8 10a1 1 0 0 0 1.562 0l8-10c.24-.301.286-.712.12-1.059z"></path></svg>
+            </svg>
               <span class="icon2"></span>
             </a>
+            <p>Download this month's timetable here</p>
           </div>
         </div>
       </div>

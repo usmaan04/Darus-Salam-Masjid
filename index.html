@@ -20,14 +20,15 @@
         <header>
           <nav>
             <div class="navbar-left">
+              <img src="assets/logo.PNG">
               <a href="#header" class="Name">Darus Salam Masjid</a>
             </div>
             <div class="navbar-middle">
-              <a class="option-selected" href="#header">Home</a>
-              <a href="#prayer-times">Prayer Times</a>
-              <a href="#about-us">About Us</a>
-              <a href="#donate">Donate</a>
-              <a href="#contact-us">Contact Us</a>
+              <a class="first option-selected" href="#header">Home</a>
+              <a class="middle" href="#prayer-times">Prayer Times</a>
+              <a class="middle" href="#about-us">About Us</a>
+              <a class="middle" href="#donate">Donate</a>
+              <a class="last" href="#contact-us">Contact Us</a>
             </div>
             <div class="hamburger">
               <span class="bar"></span>
@@ -48,14 +49,17 @@
       <section id="cta">
         <div class="cta-left">
           <div class="cta-content">
-            <h2>Build <span>your</span> house in <span>Jannah</span></h2>
+            <h2><i class="bx bxs-map"></i>Build <span>your</span> house in <span>Jannah</span></h2>
             <h1>Donate <span>now</span> for the <span>sake</span> of Allah</h1>
             <a id="donate-btn" class="donate2" href="#donate" type="button"
               >Donate</a
             >
           </div>
+          <img src="assets/mosque.svg">
         </div>
-        <div class="cta-right"></div>
+        <div class="cta-right">
+          <img src="assets/mosque2.jpg" alt="">
+        </div>
       </section>
 
       <!-- Intro Section -->
@@ -67,16 +71,14 @@
               Welcome to <br />
               Darus Salam Masjid
             </h1>
-            <p class="interests">
+            <p class="description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               malesuada nulla vel risus ultrices mollis tristique at tortor.
-              Mauris volutpat accumsan elit, at finibus purus sollicitudin id.
-              Proin aliquam at purus in iaculis. Nullam venenatis mi a nibh
-              mollis, a consectetur nunc porttitor.
             </p>
             <ul class="facilities">
               <li>
-                <span><i class="bx bx-shower"></i></span><a>Wudhu Facilities</a>
+                <span><i class="bx bx-shower"></i></span>
+                <a>Wudhu Facilities</a>
               </li>
               <li>
                 <span><i class="bx bxs-school"></i></span
@@ -95,18 +97,16 @@
               href="#about-us"
               type="button"
               class="learn-more"
-              >Learn More</a
-            >
+              >Learn More
+              <i 
+                class='bx bx-right-arrow-alt'>
+              </i>
+              </a>
           </div>
 
           <div class="intro-right">
-            <div class="carousel">
-              <img src="assets/mosque2.jpg" alt="Mosque 1" class="active" />
-              <img src="assets/down1.jpg" alt="Mosque 2" />
-              <img src="assets/2.jpg" alt="Mosque 3" />
-            </div>
+            <img src="assets/window.png" alt="Mosque 1" class="active">
           </div>
-        </div>
       </section>
 
       <!-- Prayer Times Section -->
@@ -134,7 +134,6 @@
             >
           </div>
           <div class="prayer-right">
-            <h2>Prayer Information</h2>
             <div class="jumuah-times">
               <h4>Salatul Jumuah Bayan</h4>
               <p class="times">13:00</p>
@@ -143,31 +142,31 @@
             </div>
             <div class="download-container">
               <div class="download-section">
-                <p>View the mobile-friendly version here</p>
                 <a type="button" class="button" href="/mobile/">
-                  <i class="bx bx-mobile-alt"></i>
+                  <i class="bx bxs-mobile"></i>
                 </a>
+                <p>View the mobile-friendly version here</p>
               </div>
               <div class="download-section">
-                <p>Download this month's timetable here</p>
                 <a
                   type="button"
                   class="button"
                   href="assets/bg.jpg"
                   download="June"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 384 512"
-                    class="svgIcon"
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24" 
+                  style="fill: deepskyblue;"
+                  class="svgIcon"
                   >
-                    <path
-                      d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
-                    ></path>
-                  </svg>
+                  <path d="M20.901 10.566A1.001 1.001 0 0 0 20 10h-4V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v7H4a1.001 1.001 0 0 0-.781 1.625l8 10a1 1 0 0 0 1.562 0l8-10c.24-.301.286-.712.12-1.059z"></path></svg>
+                </svg>
                   <span class="icon2"></span>
                 </a>
+                <p>Download this month's timetable here</p>
               </div>
             </div>
           </div>
@@ -241,6 +240,7 @@
               the sake of Allah but that Allah raises his status.”
             </p>
             <p>Sahih Muslim 2588</p>
+            <img src="assets/quote.svg">
           </div>
         </div>
       </section>
@@ -255,14 +255,14 @@
                 type="text"
                 id="firstName"
                 name="firstName"
-                placeholder="First Name"
+                placeholder="Enter your first name"
                 required
               />
               <input
                 type="text"
                 id="lastName"
                 name="lastName"
-                placeholder="Last Name"
+                placeholder="Enter your first name"
                 required
               />
             </div>
@@ -271,7 +271,8 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Email"
+                placeholder="Enter your email"
+                
                 required
               />
               <input
@@ -291,9 +292,7 @@
                 placeholder="Phone"
                 required
               />
-
-              <label for="contactPreference">Preference:</label>
-              <select id="contactPreference" name="contactPreference">
+              <select id="contactPreference" name="contactPreference"  placeholder="Preference">
                 <option value="Email">Email</option>
                 <option value="Phone">Phone</option>
               </select>
@@ -303,7 +302,7 @@
               type="text"
               id="subject"
               name="subject"
-              placeholder="Subject"
+              placeholder="Enter your subject"
               required
             />
             <textarea
@@ -314,18 +313,19 @@
               placeholder="Message"
             ></textarea>
             <button type="button" class="submit" onclick="validateForm()">
-              Submit
+              Submit<i class='bx bxs-paper-plane'></i>
             </button>
           </form>
 
           <div class="contact-right">
             <h2>Contact Information</h2>
-            <h4>Address</h4>
+            <h4><i class="bx bxs-map"></i>Address</h4>
             <p>48 Cook St, Wednesbury WS10 9RW</p>
-            <h4>Telephone</h4>
-            <p>+44 7974 187404, +44 7886 346629</p>
-            <h4>Email</h4>
-            <p>darussalammasjiddarlaston@gmail.com</p>
+            <h4><i class="bx bxs-phone"></i>Telephone</h4>
+            <p>+44 7974 187404     +44 7886 346629</p>
+            <h4><i class="bx bxs-envelope"></i>Email</h4>
+            <p></i>darussalammasjiddarlaston@gmail.com</p>
+            <img src="assets/mosque.svg">
           </div>
         </div>
       </section>
@@ -340,48 +340,10 @@
             </div>
             <div class="apps">
               <h3 class="prompt">Download our App</h3>
-              <a class="playstore-button" href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  class="icon"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"
-                  ></path>
-                </svg>
-                <span class="texts">
-                  <span class="text-1">GET IT ON</span>
-                  <span class="text-2">Google Play</span>
-                </span>
-              </a>
-              <a href="#" class="playstore-button">
-                <span class="icon">
-                  <svg
-                    fill="currentcolor"
-                    viewBox="-52.01 0 560.035 560.035"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke="#ffffff"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M380.844 297.529c.787 84.752 74.349 112.955 75.164 113.314-.622 1.988-11.754 40.191-38.756 79.652-23.343 34.117-47.568 68.107-85.731 68.811-37.499.691-49.557-22.236-92.429-22.236-42.859 0-56.256 21.533-91.753 22.928-36.837 1.395-64.889-36.891-88.424-70.883-48.093-69.53-84.846-196.475-35.496-282.165 24.516-42.554 68.328-69.501 115.882-70.192 36.173-.69 70.315 24.336 92.429 24.336 22.1 0 63.59-30.096 107.208-25.676 18.26.76 69.517 7.376 102.429 55.552-2.652 1.644-61.159 35.704-60.523 106.559M310.369 89.418C329.926 65.745 343.089 32.79 339.498 0 311.308 1.133 277.22 18.785 257 42.445c-18.121 20.952-33.991 54.487-29.709 86.628 31.421 2.431 63.52-15.967 83.078-39.655"
-                      ></path>
-                    </g>
-                  </svg>
-                </span>
-                <span class="texts">
-                  <span class="text-1">Download from</span>
-                  <span class="text-2">App Store</span>
-                </span>
-              </a>
+              <div class="store-links">
+                <a href="https://play.google.com/store/apps/details?id=com.masjidbox.adarussalammasjid665b0904c91541001b3a7adf"><img src="assets/google.png" href="index.html"></a>
+                <a href="index.html"><img src="assets/apple.png" href="index.html"></a>
+              </div>
             </div>
           </div>
           <div class="quick-links">
@@ -392,15 +354,15 @@
               <li><a href="#donate">Donate</a></li>
               <li><a href="#contact-us">Contact Us</a></li>
             </ul>
+          </div>
 
-            <div class="bank-details">
-              <h3>Bank Details</h3>
-              <ul class="details">
-                <li>Name: Darus Salam Masjid</li>
-                <li>Account Number: 71731599</li>
-                <li>Sort Code: 40-19-02</li>
-              </ul>
-            </div>
+          <div class="bank-details">
+            <h3>Bank Details</h3>
+            <ul class="details">
+              <li><span>Name:</span> Darus Salam Masjid</li>
+              <li><span>Account Number:</span> 71731599</li>
+              <li><span>Sort Code:</span> 40-19-02</li>
+            </ul>
           </div>
 
           <div class="masjid-information">
@@ -425,15 +387,6 @@
                 <p>Radio Frequency: 40-19-02</p>
               </li>
             </ul>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.443916939592!2d-2.024574189343993!3d52.56992447124752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870995a3185e019%3A0x15391d8074f698f9!2sDarus-Salam%20Mosque!5e0!3m2!1sen!2suk!4v1717257165363!5m2!1sen!2suk"
-              width="60%"
-              height="10%"
-              style="border: 0; padding-top: 14px; width: auto"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
           </div>
         </footer>
         <footer class="bottom">

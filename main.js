@@ -14,7 +14,7 @@ function setupSmoothScrollLinks() {
         let offset = targetSection.offsetTop;
         // Adjust offset for specific target IDs
         if (targetId === "donate" || targetId === "about-us") {
-          offset -= 70;
+          offset -= 60;
         }
         window.scrollTo({ top: offset, behavior: "smooth" });
       }

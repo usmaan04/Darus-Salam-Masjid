@@ -1535,7 +1535,7 @@ footer.bottom {
   }
 
   .prayer-container {
-    padding: 22px;
+    padding: 0;
     justify-content: center;
     display: grid;
   }

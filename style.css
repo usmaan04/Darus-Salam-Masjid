@@ -870,7 +870,7 @@ i {
   position: static;
   grid-template-columns: 1fr 1fr;
   border-radius: 30px;
-  padding: 30px;
+  padding-top: 30px;
   column-gap: 24px;
   align-items: center;
 }

@@ -1145,7 +1145,6 @@ footer.top .bank-details ul {
 footer.top .quick-links ul li,
 footer.top .bank-details ul li {
   margin-top: 22px;
-  display: flex;
 }
 
 footer.top .bank-details ul li span {
@@ -1154,6 +1153,7 @@ footer.top .bank-details ul li span {
 
 footer.top .masjid-information ul li:nth-child(1) {
   margin-top: 22px;
+  display: flex;
 }
 
 footer.top .quick-links ul li a {

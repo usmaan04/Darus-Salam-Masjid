@@ -9,7 +9,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: clip;
 }
 
 /* Set global styling for the body */
@@ -1030,7 +1029,7 @@ i {
   margin-left: 50px;
   border-radius: 20px;
   display: grid;
-  overflow-y: clip;
+  overflow: clip;
 }
 
 .contact-right h2 {
@@ -1155,7 +1154,6 @@ footer.top .bank-details ul li span {
 
 footer.top .masjid-information ul li:nth-child(1) {
   margin-top: 22px;
-  display: flex;
 }
 
 footer.top .quick-links ul li a {

@@ -1368,6 +1368,10 @@ footer.bottom {
     justify-content: flex-end;
   }
 
+  body {
+    overflow-x: clip;
+  }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -1537,10 +1541,6 @@ footer.bottom {
     padding: 0;
     justify-content: center;
     display: grid;
-  }
-
-  .prayer-container .prayer-right {
-    padding: 15px;
   }
 
   .button {

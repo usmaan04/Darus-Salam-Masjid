@@ -15,6 +15,7 @@
 body {
   color: deepskyblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: clip;
 }
 
 @font-face {
@@ -279,7 +280,7 @@ nav {
   display: grid;
   justify-content: space-between;
   align-items: start;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   margin-top: 10%;
   gap: 10%;
 }
@@ -1366,10 +1367,6 @@ footer.bottom {
 @media screen and (min-width: 900px) {
   .intro-right{
     justify-content: flex-end;
-  }
-
-  body {
-    overflow-x: clip;
   }
 
 }

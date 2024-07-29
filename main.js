@@ -134,11 +134,22 @@ function validateForm() {
     return true;
   }
 
+  // Validate contact preference
+  function checkPreference(contactPreference) {
+    if (contactPreference == "Preference") {
+      alert("Please choose your preference for contact");
+      return false;
+    }
+  return true;
+  }
+
   if (
     validateEmail(email) &&
     validatePhoneNumber(phone) &&
-    checkMatchingEmails(email, confirmEmail)
+    checkMatchingEmails(email, confirmEmail) &&
+    checkPreference(contactPreference)
   ) {
+    
     // Display summary
     const fullName = firstName + " " + lastName;
     const summaryMessage = `To darussalammasjiddarlaston@gmail.com \nName: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nContact Preference: ${contactPreference}\nSubject: ${subject}\nMessage: ${message}`;

@@ -1021,6 +1021,7 @@ i {
 /* Submit button Hover  */
 #contactForm button:hover {
   background: deepskyblue;
+  cursor: pointer;
 }
 
 .contact-right {

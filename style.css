@@ -280,7 +280,6 @@ nav {
   display: grid;
   justify-content: space-between;
   align-items: start;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   margin-top: 10%;
   gap: 10%;
 }
@@ -1205,6 +1204,18 @@ footer.bottom {
   margin-right: auto;
 }
 
+@media screen and (min-width: 1518px) {
+  .intro-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1518px) {
+  .intro-container{
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .navbar-middle a {
     padding: 10px 15px;
@@ -1519,8 +1530,8 @@ footer.bottom {
     background: none;
   }
 
-  .intro-container {
-    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  .intro-container{
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
 
   .intro-left {
